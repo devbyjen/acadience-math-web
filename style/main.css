@@ -1,0 +1,23 @@
+/* @import 'reset.css';
+@import 'tabs.css'; */
+
+.problem {
+    margin:20px;
+}
+.solution {
+    display: inline-block;
+}
+
+.benchmark-sections {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+.benchmark-section {
+    /* flex: 33.3%; */
+    width:500px;
+    border:1px solid black;
+    padding:5px;
+    margin: 5px;
+}
