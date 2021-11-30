@@ -8,16 +8,26 @@
     display: inline-block;
 }
 
-.benchmark-sections {
+.form-sections {
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
 }
 
-.benchmark-section {
+.form-section {
     /* flex: 33.3%; */
     width:500px;
     border:1px solid black;
     padding:5px;
     margin: 5px;
+}
+
+.grade h2 {
+    color:blue;
+    width: 90vw;
+}
+
+.wrong {
+    color: red;
+    font-weight:900;
 }
