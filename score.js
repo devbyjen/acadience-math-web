@@ -182,6 +182,20 @@ function getMax(scores) {
     totalScore.innerHTML = `Total Score: ${total}/${max}`
 }
 
+function reset(section) {
+    console.log("resetting section " + section)
+    let problems = document.querySelectorAll(`#${section} .problem`)
+    let total = document.querySelector(`#${section}>.total`)
+    total.innerHTML = "Total Score:"
+
+    for(let i=0;i<problems.length;i++){
+        console.log()
+        problems[i].children[0].value = ""
+        problems[i].children[1].innerHTML = ""
+    }
+
+}
+
 let b2_g4_a = [
 	function b2_g4_a_1(answer) {
 		return [rtl_1ans('498', [1,2,3], answer), getMax([1,2,3])] 

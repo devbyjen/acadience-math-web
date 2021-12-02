@@ -89,7 +89,8 @@ for i in benchmarks:
             testName = f"b{benchmark}_g{grade}_{form}"
             html += f"""
                 <div id="g{grade}_{form}" class="form-section">
-                    <h3>{PRETTY_TEST_NAMES[form]}</h3>"""
+                    <h3>{PRETTY_TEST_NAMES[form]}</h3>
+                    <button class="reset" onclick="reset('g{grade}_{form}')">Clear Answers</button>"""
             i=0
             for row in data[testName]:
                 html += f"""
@@ -100,7 +101,7 @@ for i in benchmarks:
     """
                 i+=1
             html += f"""
-                    <button onclick="scoreIt('{testName}', '{benchmark}', '{grade}', '{form}')">Score It!</button>
+                    <button class="score" onclick="scoreIt('{testName}', '{benchmark}', '{grade}', '{form}')">Score It!</button>
                     <div class="total" id='g{grade}_{form}_total'>Total Score: </div>
                 </div>
     """
