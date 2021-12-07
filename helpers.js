@@ -77,7 +77,7 @@ function rtl_1ans(correct_answer, scores, answer) {
 // Scoring for fractions
 // answer formatting: object with possible keys: whole, top, bottom.
 // values inside answer object must be strings
-function rtl_fraction(correct_answer, scores, answer, isBonus) {
+function rtl_fraction(correct_answer, scores, answer, isBonus=false) {
     let num = 0
     if(typeof answer == 'undefined' || answer == ''){
         console.log("Answer was undefined.")
@@ -99,8 +99,27 @@ function rtl_fraction(correct_answer, scores, answer, isBonus) {
     if('bottom' in correct_answer && 'bottom' in answer){
         num += get_num_correct_digits(correct_answer.bottom, answer.bottom, true)
     }
-	//test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
-	if(!isBonus && num < (correct_answer.whole?correct_answer.whole.length:0 + correct_answer.top.length + correct_answer.bottom.length)){
+
+
+    //find number of digits in correct answer & answer
+    let numDigits = correct_answer.top.length + correct_answer.bottom.length
+    let actualDigits = answer.top.length + answer.bottom.length
+    if(correct_answer.whole){
+        numDigits+=correct_answer.whole.length
+    }
+    if(answer.whole){
+        actualDigits += answer.whole.length
+    }
+
+    //bonus answer must be EXACT, for the bonus points. Check if answer is longer than it should be, and return 0 if so.
+    //This catches edge case of 8 9/9 simplified = 9, but is giving full marks bc the right-to-left unsimplified answer(8 9/9) ends with the full bonus answer (9)
+    if(isBonus && actualDigits != numDigits){
+        return 0
+    }
+
+    //test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
+    console.log(`Digits correct: ${num}/${numDigits}`)
+	if(!isBonus && num < numDigits){
 		console.log(`Testing for nonstandard. correct: ${correct_answer.whole} ${correct_answer.top}/${correct_answer.bottom}  answer: ${answer.whole} ${answer.top}/${answer.bottom}`)
 		let correct_as_decimal = 0
         correct_as_decimal += correct_answer.whole? parseFloat(correct_answer.whole):0
@@ -111,6 +130,7 @@ function rtl_fraction(correct_answer, scores, answer, isBonus) {
 
 		//Give top nonbonus score, because whatever they wrote is technically correct.
 		if(correct_as_decimal == answer_as_decimal) {
+            console.log(`${correct_as_decimal} = ${answer_as_decimal}, giving full (non-bonus) points.`)
             return scores[scores.length-1] 
 		}
 	}
@@ -118,10 +138,11 @@ function rtl_fraction(correct_answer, scores, answer, isBonus) {
 
         return 0
     }
+    console.log(`score: ${scores[num-1]}`)
     return scores[num-1]
 }
 
-// Scoring for fractions
+// Scoring for division problems
 // answer formatting: object with possible keys: whole, rem.
 // values inside answer object must be strings
 function ltr_div(correct_answer, scores, answer) {
@@ -180,4 +201,18 @@ function getMax(scores) {
     }
     const totalScore = document.querySelector(`#g${grade}_${form}_total`);
     totalScore.innerHTML = `Total Score: ${total}/${max}`
+}
+
+function reset(section) {
+    console.log("resetting section " + section)
+    let problems = document.querySelectorAll(`#${section} .problem`)
+    let total = document.querySelector(`#${section}>.total`)
+    total.innerHTML = "Total Score:"
+
+    for(let i=0;i<problems.length;i++){
+        console.log()
+        problems[i].children[0].value = ""
+        problems[i].children[1].innerHTML = ""
+    }
+
 }

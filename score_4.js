@@ -87,7 +87,7 @@ function rtl_fraction(correct_answer, scores, answer) {
     return scores[num-1]
 }
 
-// Scoring for fractions
+// Scoring for division
 // answer formatting: object with possible keys: whole, rem.
 // values inside answer object must be strings
 function ltr_div(correct_answer, scores, answer) {
