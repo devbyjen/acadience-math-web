@@ -99,10 +99,25 @@ function rtl_fraction(correct_answer, scores, answer, isBonus=false) {
     if('bottom' in correct_answer && 'bottom' in answer){
         num += get_num_correct_digits(correct_answer.bottom, answer.bottom, true)
     }
-	//test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
-    let numDigits = correct_answer.top.length + correct_answer.bottom.length
-    if(correct_answer.whole){numDigits+=correct_answer.whole.length}
 
+
+    //find number of digits in correct answer & answer
+    let numDigits = correct_answer.top.length + correct_answer.bottom.length
+    let actualDigits = answer.top.length + answer.bottom.length
+    if(correct_answer.whole){
+        numDigits+=correct_answer.whole.length
+    }
+    if(answer.whole){
+        actualDigits += answer.whole.length
+    }
+
+    //bonus answer must be EXACT, for the bonus points. Check if answer is longer than it should be, and return 0 if so.
+    //This catches edge case of 8 9/9 simplified = 9, but is giving full marks bc the right-to-left unsimplified answer(8 9/9) ends with the full bonus answer (9)
+    if(isBonus && actualDigits != numDigits){
+        return 0
+    }
+
+    //test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
     console.log(`Digits correct: ${num}/${numDigits}`)
 	if(!isBonus && num < numDigits){
 		console.log(`Testing for nonstandard. correct: ${correct_answer.whole} ${correct_answer.top}/${correct_answer.bottom}  answer: ${answer.whole} ${answer.top}/${answer.bottom}`)
@@ -115,6 +130,7 @@ function rtl_fraction(correct_answer, scores, answer, isBonus=false) {
 
 		//Give top nonbonus score, because whatever they wrote is technically correct.
 		if(correct_as_decimal == answer_as_decimal) {
+            console.log(`${correct_as_decimal} = ${answer_as_decimal}, giving full (non-bonus) points.`)
             return scores[scores.length-1] 
 		}
 	}
@@ -122,6 +138,7 @@ function rtl_fraction(correct_answer, scores, answer, isBonus=false) {
 
         return 0
     }
+    console.log(`score: ${scores[num-1]}`)
     return scores[num-1]
 }
 
@@ -637,13 +654,13 @@ let b2_g3_a = [
 		return [rtl_1ans('79', [1,2], answer), getMax([1,2])] 
 	}, 
 	function b2_g3_a_17(answer) {
-		return [rtl_1ans('150', [1,2], answer), getMax([1,2])] 
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
 	}, 
 	function b2_g3_a_18(answer) {
-		return [rtl_1ans('4 1/9', [1], answer), getMax([1])] 
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
 	}, 
 	function b2_g3_a_19(answer) {
-		return [ltr_div('3 1/6', [1], answer), getMax([1])] 
+		return [ltr_div('3', [1], answer), getMax([1])] 
 	}, 
 	function b2_g3_a_20(answer) {
 		return [rtl_1ans('40', [1,2], answer), getMax([1,2])] 
