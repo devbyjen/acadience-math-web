@@ -44,7 +44,9 @@ for test in data:
     scoringFile.write(f'\n\nlet {test} = [\n')
     # i=0
     j=0
+    print(f"====TEST {test}===")
     for row in data[test]:
+        print(f"{row}")
         line = f"\tfunction b{row['Benchmark']}_g{row['Grade']}_{row['Form']}_{row['Problem']}(answer) " + '{\n'
         method = row['Scoring Method']
         if method == '1':
@@ -56,7 +58,14 @@ for test in data:
         elif method == '4':
             a = row['Answer'].replace('(','').replace(')','').split(',')
             s = row['Scores'].replace('(','').replace(')','').split(']')
-            line += f"\t\treturn [Math.max(\n\t\t\trtl_fraction('{a[0]}', {trimEdgeCommas(s[0]) + ']'}, answer, true), \n\t\t\trtl_fraction('{a[1]}', {trimEdgeCommas(s[1]) + ']'}, answer, false)), getMax(getDigitList({s})) \n\t\t]\n" + "\t}"
+            line += f"\t\treturn [Math.max("
+            for num in range(0,len(a)):
+                line += f"\n\t\t\trtl_fraction('{a[num]}', {trimEdgeCommas(s[num]) + ']'}, answer,"
+                if num < (len(a)-1):
+                    line += ' true),'
+                else:
+                    line += ' false)'
+            line += f"), getMax(getDigitList({s})) \n\t\t]\n" + "\t}"
         else:
             line += f"\t\treturn [0, getMax({row['Scores']})] \n\t" + "}"
         

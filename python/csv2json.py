@@ -8,10 +8,10 @@ def make_json(csvFilePath, jsonFilePath):
         csvReader = csv.DictReader(csvf)
         i=0
         for row in csvReader:
-            print('Line ' + str(i))
             i+=1
             key=f"b{row['Benchmark']}_g{row['Grade']}_{row['Form']}_{row['Problem']}"
             data[key] = row
+        print(f"{i} rows of data")
     
     with open(jsonFilePath, 'w') as jsonf:
         print('Dumping JSON data')

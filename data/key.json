@@ -1,0 +1,5510 @@
+{
+    "b2_g4_a_1": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "498",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_a_2": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "7120",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_a_3": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "6 1/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_a_4": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "72",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_a_5": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "44r2",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b2_g4_a_6": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "103",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_a_7": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "7/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_a_8": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "685",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_a_9": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "1056",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9]"
+    },
+    "b2_g4_a_10": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "1 1/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_a_11": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "119r4",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,13]"
+    },
+    "b2_g4_a_12": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "5",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g4_a_13": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "5644",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b2_g4_a_14": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "1/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_a_15": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "4680",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_a_16": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "1 1/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_a_17": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "1/4 ",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_a_18": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "1/6",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_a_19": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "4338",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_a_20": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "78r5",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b2_g4_a_21": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "21",
+        "Answer": "40r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b2_g4_a_22": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "22",
+        "Answer": "1938",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b2_g4_a_23": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "23",
+        "Answer": "4879",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_a_24": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "24",
+        "Answer": "6622",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_a_25": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "25",
+        "Answer": "299",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b2_g4_b_1": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "965",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_b_2": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "7411",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_b_3": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "1 1/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_b_4": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "54",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_b_5": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "137r2",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10,14]"
+    },
+    "b2_g4_b_6": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "61",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_b_7": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "(3/4,6/8)",
+        "Scoring Method": "4",
+        "Scores": "([0,3],[1,2])"
+    },
+    "b2_g4_b_8": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "6789",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_b_9": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "858",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b2_g4_b_10": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "(5 1/4, 5 2/8)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,4],[1,2,3])"
+    },
+    "b2_g4_b_11": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "31r3",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b2_g4_b_12": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "40r1",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g4_b_13": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "1088",
+        "Scoring Method": "1",
+        "Scores": "[2,4,7,10]"
+    },
+    "b2_g4_b_14": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "(1/2, 5/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,4],[1,2,3])"
+    },
+    "b2_g4_b_15": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "4312",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_b_16": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "9 3/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g4_b_17": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "1/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_b_18": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "1/6",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g4_b_19": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "5238",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_b_20": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "71r4",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b2_g4_b_21": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "21",
+        "Answer": "117r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,13]"
+    },
+    "b2_g4_b_22": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "22",
+        "Answer": "2581",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b2_g4_b_23": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "23",
+        "Answer": "8658",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_b_24": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "24",
+        "Answer": "5241",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g4_b_25": {
+        "Benchmark": "2",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "25",
+        "Answer": "627",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b2_g5_a_1": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "9221",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g5_a_2": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "4812",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b2_g5_a_3": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "(9 1/8, 8 9/8)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,10],[3,6,9])"
+    },
+    "b2_g5_a_4": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "32153",
+        "Scoring Method": "1",
+        "Scores": "[2,3,4,11,14]"
+    },
+    "b2_g5_a_5": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "92",
+        "Scoring Method": "3",
+        "Scores": "[5,10]"
+    },
+    "b2_g5_a_6": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "304r1",
+        "Scoring Method": "3",
+        "Scores": "[2,5,8,11]"
+    },
+    "b2_g5_a_7": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "(3 1/2, 3 2/4)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,4], [1,2,3])"
+    },
+    "b2_g5_a_8": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "1/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b2_g5_a_9": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "8667",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g5_a_10": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "2241",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g5_a_11": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "32",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b2_g5_a_12": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "(1/6, 12/72)",
+        "Scoring Method": "4",
+        "Scores": "([0,9],[2,4,6,8])"
+    },
+    "b2_g5_a_13": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "40r1",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b2_g5_a_14": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "10648",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b2_g5_a_15": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": " 9 13/14",
+        "Scoring Method": "2",
+        "Scores": "[2,4,6,8,11]"
+    },
+    "b2_g5_a_16": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "49802",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b2_g5_b_1": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "8046",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g5_b_2": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "6400",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b2_g5_b_3": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "(7,6 10/10)",
+        "Scoring Method": "4",
+        "Scores": "([12],[2,4,6,8,11])"
+    },
+    "b2_g5_b_4": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "25340",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b2_g5_b_5": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "58",
+        "Scoring Method": "3",
+        "Scores": "[6,12]"
+    },
+    "b2_g5_b_6": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "21r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b2_g5_b_7": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "5 3/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g5_b_8": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "(2/5,4/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,4],[1,2,3])"
+    },
+    "b2_g5_b_9": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "8778",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g5_b_10": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "1350",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g5_b_11": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "4",
+        "Scoring Method": "3",
+        "Scores": "[5]"
+    },
+    "b2_g5_b_12": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "13/18",
+        "Scoring Method": "2",
+        "Scores": "[2,4,6,8]"
+    },
+    "b2_g5_b_13": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "40r1",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b2_g5_b_14": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "10197",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b2_g5_b_15": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "(9, 8 9/9)",
+        "Scoring Method": "4",
+        "Scores": "([10],[3,6,9])"
+    },
+    "b2_g5_b_16": {
+        "Benchmark": "2",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "19656",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b2_g6_a_1": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "87.7",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_a_2": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "1.02",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_a_3": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "16131",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b2_g6_a_4": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "70",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b2_g6_a_5": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "4 1/9",
+        "Scoring Method": "2",
+        "Scores": "[2,4,7]"
+    },
+    "b2_g6_a_6": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "78.40",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b2_g6_a_7": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "68.59",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b2_g6_a_8": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "27.72",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b2_g6_a_9": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "150",
+        "Scoring Method": "3",
+        "Scores": "[4,8,12]"
+    },
+    "b2_g6_a_10": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "8.35",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_a_11": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "32.2",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_a_12": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "156",
+        "Scoring Method": "3",
+        "Scores": "[6,12,18]"
+    },
+    "b2_g6_a_13": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "13.650",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12,15]"
+    },
+    "b2_g6_a_14": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "3.6",
+        "Scoring Method": "3",
+        "Scores": "[4,8,12]"
+    },
+    "b2_g6_a_15": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "5.95",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_a_16": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "10.3",
+        "Scoring Method": "3",
+        "Scores": "[4,7,10,14]"
+    },
+    "b2_g6_b_1": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "74.8",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_b_2": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "5.01",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_b_3": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "41888",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b2_g6_b_4": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "110",
+        "Scoring Method": "3",
+        "Scores": "[4,8,13]"
+    },
+    "b2_g6_b_5": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "3 1/6",
+        "Scoring Method": "2",
+        "Scores": "[2,4,7]"
+    },
+    "b2_g6_b_6": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "68.58",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b2_g6_b_7": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "8.68",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_b_8": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "25.83",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b2_g6_b_9": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "210",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b2_g6_b_10": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "9.06",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_b_11": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "29.4",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_b_12": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "39",
+        "Scoring Method": "3",
+        "Scores": "[5,11]"
+    },
+    "b2_g6_b_13": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "46.851",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12,15]"
+    },
+    "b2_g6_b_14": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": ".7",
+        "Scoring Method": "3",
+        "Scores": "[3,6]"
+    },
+    "b2_g6_b_15": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "1.75",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b2_g6_b_16": {
+        "Benchmark": "2",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "10.5",
+        "Scoring Method": "3",
+        "Scores": "[4,7,10,14]"
+    },
+    "b2_g3_a_1": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "89",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_2": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "979",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_a_3": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "72",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_4": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "0",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g3_a_5": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "86",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_6": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "90",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_7": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "42",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_8": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "754",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_a_9": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "210",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_a_10": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "35",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_11": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "42",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_12": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "8.35",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_a_13": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "12",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_14": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "941",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_a_15": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "420",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_a_16": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "79",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_17": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "150",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_18": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "4 1/9",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g3_a_19": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "3 1/6",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_a_20": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "40",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_21": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "21",
+        "Answer": "705",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_a_22": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "22",
+        "Answer": "28",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_23": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "23",
+        "Answer": "67",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_a_24": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "24",
+        "Answer": "2",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_a_25": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "25",
+        "Answer": "20",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_1": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "88",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_2": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "867",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_b_3": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "56",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_4": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "0",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g3_b_5": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "82",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_6": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "75",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_7": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "21",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_8": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "174",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_b_9": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "8",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_b_10": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "26",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_11": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "80",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_12": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "5",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_b_13": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "18",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_14": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "815",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_b_15": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "720",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_b_16": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "89",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_17": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "9",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g3_b_18": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "16",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_19": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "8",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_b_20": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "45",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_21": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "21",
+        "Answer": "430",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_b_22": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "22",
+        "Answer": "48",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g3_b_23": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "23",
+        "Answer": "388",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b2_g3_b_24": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "24",
+        "Answer": "3",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b2_g3_b_25": {
+        "Benchmark": "2",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "25",
+        "Answer": "15",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_1": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "9",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_a_2": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "29",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_3": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "86",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_4": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "71",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_5": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "93",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_6": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "4",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_a_7": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "99",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_8": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "48",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_9": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "21",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_10": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "14",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_11": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "5",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_a_12": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "81",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_13": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "46",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_14": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "57",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_15": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "67",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_16": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "52",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_17": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "2",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_a_18": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "95",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_19": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "78",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_a_20": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "37",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_1": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "15",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_2": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "79",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_3": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "23",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_4": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "44",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_5": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "99",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_6": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "5",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_b_7": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "98",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_8": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "28",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_9": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "23",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_10": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "2",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_b_11": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "7",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g2_b_12": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "60",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_13": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "67",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_14": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "88",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_15": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "89",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_16": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "93",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_17": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "40",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_18": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "63",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_19": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "38",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g2_b_20": {
+        "Benchmark": "1",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "38",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_1": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "16",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_2": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "89",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_3": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "86",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_4": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "71",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_5": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "96",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_6": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "2",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_a_7": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "99",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_8": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "6",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_a_9": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "33",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_10": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "16",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_11": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "9",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_a_12": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "91",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_13": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "49",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_14": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "48",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_15": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "79",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_16": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "30",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_17": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "31",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_18": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "80",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_19": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "79",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_a_20": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "4",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_b_1": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "8",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_b_2": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "17",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_3": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "75",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_4": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "90",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_5": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "90",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_6": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "1",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_b_7": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "59",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_8": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "9",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_b_9": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "70",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_10": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "51",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_11": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "8",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b2_g2_b_12": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "90",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_13": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "98",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_14": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "87",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_15": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "97",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_16": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "32",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_17": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "14",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_18": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "41",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_19": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "89",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b2_g2_b_20": {
+        "Benchmark": "2",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "65",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_1": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "12",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_2": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "77",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_3": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "34",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_4": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "90",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_5": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "86",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_6": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "2",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g2_a_7": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "87",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_8": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "7",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g2_a_9": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "93",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_10": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "21",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_11": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "5",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g2_a_12": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "92",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_13": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "35",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_14": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "73",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_15": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "78",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_16": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "50",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_17": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "10",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_18": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "90",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_19": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "98",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_a_20": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "17",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_1": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "10",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_2": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "25",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_3": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "69",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_4": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "94",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_5": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "85",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_6": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "3",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g2_b_7": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "88",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_8": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "34",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_9": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "61",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_10": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "10",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_11": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "8",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g2_b_12": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "53",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_13": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "37",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_14": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "89",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_15": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "98",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_16": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "31",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_17": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "41",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_18": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "93",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_19": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "68",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g2_b_20": {
+        "Benchmark": "3",
+        "Grade": "2",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "6",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g3_a_1": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "66",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_2": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "691",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_3": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "63",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_4": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "0",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g3_a_5": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "84",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_6": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "38",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_7": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "32",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_8": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "403",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_9": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "3",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_a_10": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "92",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_11": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "83",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_12": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "7",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_a_13": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "12",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_14": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "902",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_15": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "540",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_16": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "188",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_17": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "37",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_18": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "25",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_19": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "8",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_a_20": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "27",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_21": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "21",
+        "Answer": "423",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_22": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "22",
+        "Answer": "64",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_a_23": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "23",
+        "Answer": "663",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_a_24": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "24",
+        "Answer": "3",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_a_25": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "25",
+        "Answer": "6",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_1": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "77",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_2": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "872",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_3": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "54",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_4": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "3",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_5": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "68",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_6": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "78",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_7": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "35",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_8": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "931",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_9": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "9",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_10": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "21",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_11": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "82",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_12": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "3",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_13": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "8",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_14": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "900",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_15": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "180",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_16": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "171",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_17": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "28",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_18": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "64",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_19": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "8",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_20": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "24",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_21": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "21",
+        "Answer": "810",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_22": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "22",
+        "Answer": "99",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g3_b_23": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "23",
+        "Answer": "237",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g3_b_24": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "24",
+        "Answer": "2",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g3_b_25": {
+        "Benchmark": "1",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "25",
+        "Answer": "16",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_1": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "98",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_2": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "88",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_3": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "72",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_4": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "0",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g3_a_5": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "63",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_6": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "70",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_7": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "28",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_8": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "610",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_a_9": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "4",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_a_10": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "24",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_11": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "71",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_12": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "8",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_a_13": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "14",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_14": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "800",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_a_15": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "150",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_a_16": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "286",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_a_17": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "7",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g3_a_18": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "81",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_19": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "7",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_a_20": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "40",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_21": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "21",
+        "Answer": "501",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_a_22": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "22",
+        "Answer": "88",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_23": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "23",
+        "Answer": "78",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_a_24": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "24",
+        "Answer": "2",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_a_25": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "a",
+        "Problem": "25",
+        "Answer": "12",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_1": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "97",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_2": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "279",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_3": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "54",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_4": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "3",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g3_b_5": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "99",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_6": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "74",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_7": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "36",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_8": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "305",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_9": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "2",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_b_10": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "40",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_11": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "71",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_12": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "3",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_b_13": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "12",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_14": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "740",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_15": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "100",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_16": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "136",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_17": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "5",
+        "Scoring Method": "1",
+        "Scores": "[1]"
+    },
+    "b3_g3_b_18": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "36",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_19": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "6",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_b_20": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "32",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_21": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "21",
+        "Answer": "800",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_22": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "22",
+        "Answer": "84",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g3_b_23": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "23",
+        "Answer": "387",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g3_b_24": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "24",
+        "Answer": "7",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g3_b_25": {
+        "Benchmark": "3",
+        "Grade": "3",
+        "Form": "b",
+        "Problem": "25",
+        "Answer": "16",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_a_1": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "847",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_a_2": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "7020",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_a_3": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "2 2/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_a_4": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "72",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_a_5": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "143r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10,14]"
+    },
+    "b1_g4_a_6": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "123",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_a_7": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "7/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_a_8": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "6886",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_a_9": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "209",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b1_g4_a_10": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "(8 1/4, 8 3/12)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,5],[1,2,3,4])"
+    },
+    "b1_g4_a_11": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "80r2",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b1_g4_a_12": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "7",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g4_a_13": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "7128",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g4_a_14": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "3/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_a_15": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "3156",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_a_16": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "(7 2/5,7 4/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,5], [1,2,3,4])"
+    },
+    "b1_g4_a_17": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "2/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_a_18": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "7/12",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_a_19": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "5803",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_a_20": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "156r3",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10,14]"
+    },
+    "b1_g4_a_21": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "21",
+        "Answer": "132r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,12]"
+    },
+    "b1_g4_a_22": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "22",
+        "Answer": "1495",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g4_a_23": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "23",
+        "Answer": "1746",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_a_24": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "24",
+        "Answer": "9206",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_a_25": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "25",
+        "Answer": "408",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b1_g4_b_1": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "398",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_b_2": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "7132",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_b_3": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "9 3/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_b_4": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "56",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_b_5": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "96r3",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b1_g4_b_6": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "262",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_b_7": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "3/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_b_8": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "4359",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_b_9": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "198",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b1_g4_b_10": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "(5 3/4, 5 6/8)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,4],[1,2,3])"
+    },
+    "b1_g4_b_11": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "31r4",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b1_g4_b_12": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "7",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b1_g4_b_13": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "2688",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g4_b_14": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "3/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_b_15": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "7974",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_b_16": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "2 1/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g4_b_17": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "2/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_b_18": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "5/6",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g4_b_19": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "3934",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_b_20": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "72r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b1_g4_b_21": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "21",
+        "Answer": "206r3",
+        "Scoring Method": "3",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g4_b_22": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "22",
+        "Answer": "2755",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g4_b_23": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "23",
+        "Answer": "4089",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_b_24": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "24",
+        "Answer": "5006",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g4_b_25": {
+        "Benchmark": "1",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "25",
+        "Answer": "861",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b3_g4_a_1": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "898",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g4_a_2": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "7121",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_a_3": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "1 1/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g4_a_4": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "54",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_a_5": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "98r6",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b3_g4_a_6": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "67",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_a_7": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "7/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_a_8": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "3887",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_a_9": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "492",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b3_g4_a_10": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "1 1/6",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g4_a_11": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "101r8",
+        "Scoring Method": "3",
+        "Scores": "[2,4,7,10]"
+    },
+    "b3_g4_a_12": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "9",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g4_a_13": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "1184",
+        "Scoring Method": "1",
+        "Scores": "[2,4,7,10]"
+    },
+    "b3_g4_a_14": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "3/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_a_15": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "5124",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_a_16": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "(7 1/2, 7 2/4)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,4],[1,2,3])"
+    },
+    "b3_g4_a_17": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "17",
+        "Answer": "2/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_a_18": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "18",
+        "Answer": "(1/2, 3/6)",
+        "Scoring Method": "4",
+        "Scores": "([0,3],[1,2])"
+    },
+    "b3_g4_a_19": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "19",
+        "Answer": "5634",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_a_20": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "20",
+        "Answer": "258r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10,14]"
+    },
+    "b3_g4_a_21": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "21",
+        "Answer": "200r2",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,12]"
+    },
+    "b3_g4_a_22": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "22",
+        "Answer": "2024",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b3_g4_a_23": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "23",
+        "Answer": "6877",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_a_24": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "24",
+        "Answer": "3421",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_a_25": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "a",
+        "Problem": "25",
+        "Answer": "627",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b3_g4_b_1": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "898",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g4_b_2": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "3632",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_3": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "6 2/3",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g4_b_4": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "63",
+        "Scoring Method": "1",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_b_5": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "184r2",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10,14]"
+    },
+    "b3_g4_b_6": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "340",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g4_b_7": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "(1/2,3/6)",
+        "Scoring Method": "4",
+        "Scores": "([0,3],[1,2])"
+    },
+    "b3_g4_b_8": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "6488",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_9": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "869",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b3_g4_b_10": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "11 7/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_11": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "313r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,12]"
+    },
+    "b3_g4_b_12": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "3",
+        "Scoring Method": "3",
+        "Scores": "[1]"
+    },
+    "b3_g4_b_13": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "4704",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b3_g4_b_14": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "(1/2,2/4)",
+        "Scoring Method": "4",
+        "Scores": "([0,3],[1,2])"
+    },
+    "b3_g4_b_15": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "1518",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_16": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "(7 1/2,7 2/4)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,4],[1,2,3])"
+    },
+    "b3_g4_b_17": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "17",
+        "Answer": "1/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_b_18": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "18",
+        "Answer": "5/8",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b3_g4_b_19": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "19",
+        "Answer": "4904",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_20": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "20",
+        "Answer": "46r8",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b3_g4_b_21": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "21",
+        "Answer": "111r2",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,12]"
+    },
+    "b3_g4_b_22": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "22",
+        "Answer": "650",
+        "Scoring Method": "1",
+        "Scores": "[3,6,9]"
+    },
+    "b3_g4_b_23": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "23",
+        "Answer": "6287",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_24": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "24",
+        "Answer": "9101",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g4_b_25": {
+        "Benchmark": "3",
+        "Grade": "4",
+        "Form": "b",
+        "Problem": "25",
+        "Answer": "935",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8]"
+    },
+    "b1_g5_a_1": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "8005",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g5_a_2": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "2730",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g5_a_3": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "3 1/6",
+        "Scoring Method": "2",
+        "Scores": "[3,6,9]"
+    },
+    "b1_g5_a_4": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "61625",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b1_g5_a_5": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "76",
+        "Scoring Method": "3",
+        "Scores": "[6,12]"
+    },
+    "b1_g5_a_6": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "90r6",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b1_g5_a_7": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "4 1/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g5_a_8": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "3/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b1_g5_a_9": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "6529",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g5_a_10": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "2244",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g5_a_11": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "25",
+        "Scoring Method": "3",
+        "Scores": "[5,11]"
+    },
+    "b1_g5_a_12": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "39/40",
+        "Scoring Method": "2",
+        "Scores": "[2,4,6,8]"
+    },
+    "b1_g5_a_13": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "50",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b1_g5_a_14": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "9823",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g5_a_15": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "(10 7/18, 9 25/18)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,0,0,12],[2,4,6,8,11])"
+    },
+    "b1_g5_a_16": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "43378",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b1_g5_b_1": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "6242",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g5_b_2": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "7414",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g5_b_3": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "4 1/14",
+        "Scoring Method": "2",
+        "Scores": "[2,4,7,10]"
+    },
+    "b1_g5_b_4": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "52272",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b1_g5_b_5": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "84",
+        "Scoring Method": "3",
+        "Scores": "[6,12]"
+    },
+    "b1_g5_b_6": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "445r1",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9,13]"
+    },
+    "b1_g5_b_7": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "6 4/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g5_b_8": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "(1/5, 2/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,4],[1,2,3])"
+    },
+    "b1_g5_b_9": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "7776",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g5_b_10": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "5352",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g5_b_11": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "12",
+        "Scoring Method": "3",
+        "Scores": "[5,11]"
+    },
+    "b1_g5_b_12": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "25/36",
+        "Scoring Method": "2",
+        "Scores": "[2,4,6,8]"
+    },
+    "b1_g5_b_13": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "50",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b1_g5_b_14": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "5830",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b1_g5_b_15": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "(5 9/10, 5 18/20, 59/10, 118/20)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,0,14], [0,0,0,0,13], [0,0,0,13], [2,4,6,9,12])"
+    },
+    "b1_g5_b_16": {
+        "Benchmark": "1",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "16020",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b3_g5_a_1": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "9512",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g5_a_2": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "7975",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b3_g5_a_3": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "(3 7/10, 37/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,0,15],[3,6,10,14])"
+    },
+    "b3_g5_a_4": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "33733",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b3_g5_a_5": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "98",
+        "Scoring Method": "3",
+        "Scores": "[6,12]"
+    },
+    "b3_g5_a_6": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "102r4",
+        "Scoring Method": "3",
+        "Scores": "[2,5,8,11]"
+    },
+    "b3_g5_a_7": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "(9 1/2, 9 5/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,5],[1,2,3,4])"
+    },
+    "b3_g5_a_8": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "(1/2, 2/4)",
+        "Scoring Method": "4",
+        "Scores": "([0,3],[1,2])"
+    },
+    "b3_g5_a_9": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "1849",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g5_a_10": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "4144",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g5_a_11": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "7",
+        "Scoring Method": "3",
+        "Scores": "[5]"
+    },
+    "b3_g5_a_12": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "(1 22/63, 85/63)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,0,0,9],[2,4,6,8])"
+    },
+    "b3_g5_a_13": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "40",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b3_g5_a_14": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "10263",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b3_g5_a_15": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "9 7/12",
+        "Scoring Method": "2",
+        "Scores": "[2,4,7,10]"
+    },
+    "b3_g5_a_16": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "12972",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b3_g5_b_1": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "8733",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g5_b_2": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "4860",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b3_g5_b_3": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "(10 1/4, 9 5/4, 10 2/8, 9 10/8)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,0,12], [0,0,11], [0,0,0,11], [2,4,7,10])"
+    },
+    "b3_g5_b_4": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "28210",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b3_g5_b_5": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "38",
+        "Scoring Method": "3",
+        "Scores": "[6,12]"
+    },
+    "b3_g5_b_6": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "50r4",
+        "Scoring Method": "3",
+        "Scores": "[3,6,9]"
+    },
+    "b3_g5_b_7": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "9 3/4",
+        "Scoring Method": "2",
+        "Scores": "[1,2,3]"
+    },
+    "b3_g5_b_8": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "4/5",
+        "Scoring Method": "2",
+        "Scores": "[1,2]"
+    },
+    "b3_g5_b_9": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "4806",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g5_b_10": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "6244",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g5_b_11": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "15",
+        "Scoring Method": "3",
+        "Scores": "[5,11]"
+    },
+    "b3_g5_b_12": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "(1 23/35, 58/35, 1 46/70, 116/70)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,0,0,11], [0,0,0,10], [0,0,0,0,10], [1,3,5,7,9])"
+    },
+    "b3_g5_b_13": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "280",
+        "Scoring Method": "3",
+        "Scores": "[5,10,15]"
+    },
+    "b3_g5_b_14": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "4660",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11]"
+    },
+    "b3_g5_b_15": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "(5, 4 4/4)",
+        "Scoring Method": "4",
+        "Scores": "([10],[3,6,9])"
+    },
+    "b3_g5_b_16": {
+        "Benchmark": "3",
+        "Grade": "5",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "72384",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b1_g6_a_1": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "88.9",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_a_2": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "1.32",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_a_3": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "45708",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b1_g6_a_4": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "190",
+        "Scoring Method": "3",
+        "Scores": "[5,10,15]"
+    },
+    "b1_g6_a_5": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "(3 1/6, 3 3/18)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,9],[2,4,6,8])"
+    },
+    "b1_g6_a_6": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "40.72",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b1_g6_a_7": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "46.81",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b1_g6_a_8": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "96.72",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b1_g6_a_9": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "610",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b1_g6_a_10": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "9.02",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_a_11": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "8.1",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g6_a_12": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "199",
+        "Scoring Method": "3",
+        "Scores": "[6,12,18]"
+    },
+    "b1_g6_a_13": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "70.848",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12,15]"
+    },
+    "b1_g6_a_14": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": "0.3",
+        "Scoring Method": "3",
+        "Scores": "[3,6]"
+    },
+    "b1_g6_a_15": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "1.79",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_a_16": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "10.3",
+        "Scoring Method": "3",
+        "Scores": "[4,7,10,14]"
+    },
+    "b1_g6_b_1": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "68.3",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_b_2": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "1.11",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_b_3": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "61542",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b1_g6_b_4": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "30",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b1_g6_b_5": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "5 1/9",
+        "Scoring Method": "2",
+        "Scores": "[2,4,7]"
+    },
+    "b1_g6_b_6": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "63.21",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b1_g6_b_7": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "26.79",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b1_g6_b_8": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "88.83",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b1_g6_b_9": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "50",
+        "Scoring Method": "3",
+        "Scores": "[3,6]"
+    },
+    "b1_g6_b_10": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "7.05",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_b_11": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "9.8",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3]"
+    },
+    "b1_g6_b_12": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "225",
+        "Scoring Method": "3",
+        "Scores": "[5,10,16]"
+    },
+    "b1_g6_b_13": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "23.736",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12,15]"
+    },
+    "b1_g6_b_14": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "1.8",
+        "Scoring Method": "3",
+        "Scores": "[4,8,12]"
+    },
+    "b1_g6_b_15": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "4.85",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b1_g6_b_16": {
+        "Benchmark": "1",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "10.7",
+        "Scoring Method": "3",
+        "Scores": "[4,7,10,14]"
+    },
+    "b3_g6_a_1": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "1",
+        "Answer": "49.8",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_a_2": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "2",
+        "Answer": "2.22",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_a_3": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "3",
+        "Answer": "20925",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b3_g6_a_4": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "4",
+        "Answer": "30",
+        "Scoring Method": "3",
+        "Scores": "[4,9]"
+    },
+    "b3_g6_a_5": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "5",
+        "Answer": "(9 4/5, 9 8/10)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,9],[2,4,6,8])"
+    },
+    "b3_g6_a_6": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "6",
+        "Answer": "63.15",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b3_g6_a_7": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "7",
+        "Answer": "53.48",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b3_g6_a_8": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "8",
+        "Answer": "38.88",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b3_g6_a_9": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "9",
+        "Answer": "310",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b3_g6_a_10": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "10",
+        "Answer": "8.63",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_a_11": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "11",
+        "Answer": "15.6",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_a_12": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "12",
+        "Answer": "96",
+        "Scoring Method": "3",
+        "Scores": "[6,12]"
+    },
+    "b3_g6_a_13": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "13",
+        "Answer": "50.735",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12,15]"
+    },
+    "b3_g6_a_14": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "14",
+        "Answer": ".6",
+        "Scoring Method": "3",
+        "Scores": "[3,6]"
+    },
+    "b3_g6_a_15": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "15",
+        "Answer": "2.34",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_a_16": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "a",
+        "Problem": "16",
+        "Answer": "10.3",
+        "Scoring Method": "3",
+        "Scores": "[4,7,10,14]"
+    },
+    "b3_g6_b_1": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "1",
+        "Answer": "86.9",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_b_2": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "2",
+        "Answer": "3.12",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_b_3": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "3",
+        "Answer": "61304",
+        "Scoring Method": "1",
+        "Scores": "[2,5,8,11,14]"
+    },
+    "b3_g6_b_4": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "4",
+        "Answer": "110",
+        "Scoring Method": "3",
+        "Scores": "[4,8,13]"
+    },
+    "b3_g6_b_5": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "5",
+        "Answer": "(3 1/2, 3 6/12)",
+        "Scoring Method": "4",
+        "Scores": "([0,0,9],[2,4,6,8])"
+    },
+    "b3_g6_b_6": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "6",
+        "Answer": "30.50",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b3_g6_b_7": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "7",
+        "Answer": "72.57",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4,5]"
+    },
+    "b3_g6_b_8": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "8",
+        "Answer": "48.99",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12]"
+    },
+    "b3_g6_b_9": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "9",
+        "Answer": "320",
+        "Scoring Method": "3",
+        "Scores": "[3,6,10]"
+    },
+    "b3_g6_b_10": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "10",
+        "Answer": "6.10",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_b_11": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "11",
+        "Answer": "28.8",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_b_12": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "12",
+        "Answer": "114",
+        "Scoring Method": "3",
+        "Scores": "[5,10,16]"
+    },
+    "b3_g6_b_13": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "13",
+        "Answer": "13.794",
+        "Scoring Method": "1",
+        "Scores": "[2,4,6,9,12,15]"
+    },
+    "b3_g6_b_14": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "14",
+        "Answer": "1.2",
+        "Scoring Method": "3",
+        "Scores": "[4,8,12]"
+    },
+    "b3_g6_b_15": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "15",
+        "Answer": "5.48",
+        "Scoring Method": "1",
+        "Scores": "[1,2,3,4]"
+    },
+    "b3_g6_b_16": {
+        "Benchmark": "3",
+        "Grade": "6",
+        "Form": "b",
+        "Problem": "16",
+        "Answer": "40.2",
+        "Scoring Method": "3",
+        "Scores": "[4,7,10,14]"
+    }
+}
