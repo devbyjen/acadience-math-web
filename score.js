@@ -184,7 +184,7 @@ function getMax(scores) {
     let total = 0
     let max = 0
     let possible = 0
-    let problems = document.querySelectorAll(`#g${grade}_${form} .grid>.problem`)
+    let problems = document.querySelectorAll(`#g${grade}_${form} .problem`)
 	console.log(`${problems.length} problems found`)
     for(let i=0;i<problems.length;i++){
         let answer = problems[i].children[0]
