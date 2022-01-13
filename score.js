@@ -180,17 +180,19 @@ function getMax(scores) {
 
 
  function scoreIt(testName, benchmark, grade, form) {
+	 console.log(`scoring ${testName}`)
     let total = 0
     let max = 0
     let possible = 0
-    let problems = document.querySelectorAll(`#g${grade}_${form}>.problem`)
+    let problems = document.querySelectorAll(`#g${grade}_${form} .grid>.problem`)
+	console.log(`${problems.length} problems found`)
     for(let i=0;i<problems.length;i++){
         let answer = problems[i].children[0]
         let solution = problems[i].children[1]
         returns = eval(`${testName}[i](answer.value)`)
         score = returns[0]
         possible = returns[1]
-        solution.innerHTML = `${score}/${possible}`
+        solution.innerHTML = `score: ${score}/${possible}`
         if(score < possible){
             solution.innerHTML = '<span class="wrong">' + solution.innerHTML + '</span>'
         }
@@ -200,7 +202,7 @@ function getMax(scores) {
         console.log(`so far: ${total}/${max}`)
     }
     const totalScore = document.querySelector(`#g${grade}_${form}_total`);
-    totalScore.innerHTML = `Total Score: ${total}/${max}`
+    totalScore.innerHTML = `${total}/${max}`
 }
 
 function reset(section) {

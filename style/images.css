@@ -1,0 +1,63 @@
+
+#g4_a{
+    background-image: url('./images/B3_G4_A.jpg');
+}
+#g4_b{
+    background-image: url('./images/B3_G4_B.jpg');
+}
+
+.form-section {
+    /* width: 1700px;
+    height: 2200px; */
+    width: 1050px;
+    height: 1300px; 
+    background-size:contain;
+    position:relative;
+}
+
+.total {
+    position: absolute;
+    top: 110px;
+    left: 850px;
+    /* border: 1px solid green; */
+}
+
+.score {
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+    padding: 10px;
+}
+
+.grid5x5 > .grid {
+    position:absolute;
+    top: 170px;
+    left: 70px;
+    width: 890px;
+    height: 1030px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    /* border: 3px solid red; */
+}
+
+.problem{
+    align-self: end;
+}
+
+.problem > input {
+    width: 100px;
+    padding: 15px 25px;
+    text-align:center;
+}
+
+.problem > .solution {
+    display: block;
+    height: 20px;
+    width: 140px;
+    padding: 15px 5px;
+    /* border: 1px solid blue; */
+}
+
