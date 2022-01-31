@@ -21,15 +21,15 @@
 
 </head>
 <body>
-    <h1>Acadience Math Scoring - Benchmark 1</h1>
+    <h1>Acadience Math Scoring - Benchmark 3</h1>
         <ul>
-        <li><a href="#kindergarten">Kindergarten</a></li>
+        <!-- <li><a href="#kindergarten">Kindergarten</a></li>
         <li><a href="#grade1">First Grade</a></li>
         <li><a href="#grade2">Second Grade</a></li>
-        <li><a href="#grade3">Third Grade</a></li>
+        <li><a href="#grade3">Third Grade</a></li> -->
         <li><a href="#grade4">Fourth Grade</a></li>
-        <li><a href="#grade5">Fifth Grade</a></li>
-        <li><a href="#grade6">Sixth Grade</a></li>
+        <!-- <li><a href="#grade5">Fifth Grade</a></li>
+        <li><a href="#grade6">Sixth Grade</a></li> -->
     </ul>
 
     <section>
@@ -181,8 +181,11 @@
                     </div>
                 </div>
     
-                    <button class="score" onclick="scoreIt('b3_g4_a', '3', '4', 'a')">Done</button>
+                <div class="buttons">
+                    <button class="reset" onclick="reset('g4_b'); document.getElementById('g4_b').scrollIntoView();">Start Over</button>
+                    <button class="score" onclick="scoreIt('b3_g4_a', '3', '4', 'a')">Score It</button>
                     <div class="total" id='g4_a_total'></div>
+                </div>
                 </div>
     
                 <div id="g4_b" class="form-section grid5x5">
@@ -314,8 +317,11 @@
                             <div class="solution"></div>
                         </div>
                     </div>
-                    <button class="score" onclick="scoreIt('b3_g4_b', '3', '4', 'b')">Done!</button>
-                    <div class="total" id='g4_b_total'></div>
+                    <div class="buttons">
+                        <button class="reset" onclick="reset('g4_b'); document.getElementById('g4_b').scrollIntoView();">Start Over</button>
+                        <button class="score" onclick="scoreIt('b3_g4_b', '3', '4', 'b')">Score It</button>
+                        <div class="total" id='g4_b_total'></div>
+                    </div>
                 </div>
     
 
