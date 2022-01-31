@@ -15,18 +15,29 @@
     position:relative;
 }
 
-.total {
+/* .total {
     position: absolute;
     top: 110px;
     left: 850px;
-    /* border: 1px solid green; */
-}
+} */
 
 .score {
+    margin: auto;
+    padding: 10px;
+}
+
+.total {
+    margin: auto;
+}
+
+.buttons {
     position: absolute;
     bottom: 50px;
-    left: 500px;
-    padding: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-left: 50px;
 }
 
 .grid5x5 > .grid {

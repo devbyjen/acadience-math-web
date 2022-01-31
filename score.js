@@ -218,14 +218,14 @@ function getMax(scores) {
         console.log(`so far: ${total}/${max}`)
     }
     const totalScore = document.querySelector(`#g${grade}_${form}_total`);
-    totalScore.innerHTML = `${total}/${max}`
+    totalScore.innerHTML = `Score:  ${total}/${max}`
 }
 
 function reset(section) {
     console.log("resetting section " + section)
     let problems = document.querySelectorAll(`#${section} .problem`)
-    let total = document.querySelector(`#${section}>.total`)
-    total.innerHTML = "Total Score:"
+    let total = document.querySelector(`#${section} .total`)
+    total.innerHTML = "Score:"
 
     for(let i=0;i<problems.length;i++){
         console.log()
