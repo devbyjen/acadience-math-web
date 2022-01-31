@@ -15,7 +15,23 @@ function get_num_correct_digits(correct_answer, answer, flip=false) {
             num++
         }
     }
-    // console.log(`# correct: ${num}. Comparing: ${correct_answer} & ${answer}`)
+    
+	//check for correct answer, but with extra digits.
+    //penalty for extra (nonzero) digits: -1 correct digit
+    if(num == correct_answer.length    
+        && answer.length > correct_answer.length){
+		let penalty = false;
+		for(let i=correct_answer.length; i<answer.length;i++){
+			if(answer[i] != 0){
+				penalty = true;
+			}
+		}
+
+		if(penalty){
+			num--
+		}
+	}
+
     return num;
 }
 
