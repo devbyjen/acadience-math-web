@@ -199,7 +199,7 @@ function scoreIt(testName, benchmark, grade, form) {
    let total = 0
    let max = 0
    let possible = 0
-   let problems = document.querySelectorAll(`#g${grade}_${form} .problem`)
+   let problems = document.querySelectorAll(`#${testName} .problem`)
    console.log(`${problems.length} problems found`)
    for(let i=0;i<problems.length;i++){
        let answer = problems[i].children[0]
@@ -216,8 +216,8 @@ function scoreIt(testName, benchmark, grade, form) {
        max += parseInt(possible)
        console.log(`so far: ${total}/${max}`)
    }
-   const totalScore = document.querySelector(`#g${grade}_${form}_total`);
-   totalScore.innerHTML = `Score:  ${total}/${max}`
+   const totalScore = document.querySelector(`#${testName}_total`);
+   totalScore.innerHTML = `Score:  <span>${total} /${max}</span>`
 }
 
 function reset(section) {

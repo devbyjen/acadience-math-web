@@ -16,7 +16,7 @@ function get_num_correct_digits(correct_answer, answer, flip=false) {
         }
     }
     
-	//check for correct answer, but with extra digits.
+    //check for correct answer, but with extra digits.
     //penalty for extra (nonzero) digits: -1 correct digit
     if(num == correct_answer.length    
         && answer.length > correct_answer.length){
@@ -31,7 +31,6 @@ function get_num_correct_digits(correct_answer, answer, flip=false) {
 			num--
 		}
 	}
-
     return num;
 }
 
@@ -195,43 +194,43 @@ function getMax(scores) {
 }
 
 
- function scoreIt(testName, benchmark, grade, form) {
-	 console.log(`scoring ${testName}`)
-    let total = 0
-    let max = 0
-    let possible = 0
-    let problems = document.querySelectorAll(`#g${grade}_${form} .problem`)
-	console.log(`${problems.length} problems found`)
-    for(let i=0;i<problems.length;i++){
-        let answer = problems[i].children[0]
-        let solution = problems[i].children[1]
-        returns = eval(`${testName}[i](answer.value)`)
-        score = returns[0]
-        possible = returns[1]
-        solution.innerHTML = `score: ${score}/${possible}`
-        if(score < possible){
-            solution.innerHTML = '<span class="wrong">' + solution.innerHTML + '</span>'
-        }
-        console.log(`${i+1}. ${score}/${possible}`)
-        total += parseInt(score)
-        max += parseInt(possible)
-        console.log(`so far: ${total}/${max}`)
-    }
-    const totalScore = document.querySelector(`#g${grade}_${form}_total`);
-    totalScore.innerHTML = `Score:  ${total}/${max}`
+function scoreIt(testName, benchmark, grade, form) {
+    console.log(`scoring ${testName}`)
+   let total = 0
+   let max = 0
+   let possible = 0
+   let problems = document.querySelectorAll(`#${testName} .problem`)
+   console.log(`${problems.length} problems found`)
+   for(let i=0;i<problems.length;i++){
+       let answer = problems[i].children[0]
+       let solution = problems[i].children[1]
+       returns = eval(`${testName}[i](answer.value)`)
+       score = returns[0]
+       possible = returns[1]
+       solution.innerHTML = `score: ${score}/${possible}`
+       if(score < possible){
+           solution.innerHTML = '<span class="wrong">' + solution.innerHTML + '</span>'
+       }
+       console.log(`${i+1}. ${score}/${possible}`)
+       total += parseInt(score)
+       max += parseInt(possible)
+       console.log(`so far: ${total}/${max}`)
+   }
+   const totalScore = document.querySelector(`#${testName}_total`);
+   totalScore.innerHTML = `Score:  <span>${total}/${max}</span>`
 }
 
 function reset(section) {
-    console.log("resetting section " + section)
-    let problems = document.querySelectorAll(`#${section} .problem`)
-    let total = document.querySelector(`#${section} .total`)
-    total.innerHTML = "Score:"
+   console.log("resetting section " + section)
+   let problems = document.querySelectorAll(`#${section} .problem`)
+   let total = document.querySelector(`#${section} .total`)
+   total.innerHTML = "Score:"
 
-    for(let i=0;i<problems.length;i++){
-        console.log()
-        problems[i].children[0].value = ""
-        problems[i].children[1].innerHTML = ""
-    }
+   for(let i=0;i<problems.length;i++){
+       console.log()
+       problems[i].children[0].value = ""
+       problems[i].children[1].innerHTML = ""
+   }
 
 }
 

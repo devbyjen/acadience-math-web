@@ -4,6 +4,10 @@
 .problem {
     margin:10px;
 }
+
+p, li {
+    max-width: 800px;
+}
 .solution {
     display: inline-block;
 }
@@ -36,13 +40,29 @@
 .reset {
     margin: auto;
     background-color:lightcoral;
+    transition-duration: 100ms;
+}
+
+.reset:hover, .reset:target, .reset:active, .reset:focus{
+    background-color: red;
+    color: white;
+    transition-duration: 100ms;
 }
 
 .score {
     background-color: darkseagreen;
 }
 
+.score:hover, .score:target, .score:active, .score:focus{
+    background-color: green;
+    color: white;
+    transition-duration: 100ms;
+}
+
 .total {
-    padding: 20px;
     font-weight: bold;
+}
+
+button {
+    padding: 10px;
 }

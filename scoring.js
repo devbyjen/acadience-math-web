@@ -9,7 +9,9 @@ function get_num_correct_digits(correct_answer, answer) {
             num++
         }
     }
-    // console.log(`# correct: ${num}. Comparing: ${correct_answer} & ${answer}`)
+    
+
+
     return num;
 }
 
