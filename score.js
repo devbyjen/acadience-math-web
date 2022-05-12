@@ -193,6 +193,32 @@ function getMax(scores) {
     return max
 }
 
+function toggleTeacherMode() {
+    let t = document.querySelector('.teacherMode');
+    let p = document.querySelector('.teacherMode > p > span');
+    let b = document.querySelector('.teacherMode > button');
+    let forms = document.querySelectorAll('.form-section');
+    if(t.classList.contains('on')){
+        p.innerHTML = 'OFF'
+        b.innerHTML = 'Turn ON'
+        t.classList.remove('on');
+        for(f in forms){
+            let newURL = f.style.backgroundImage.replace('.jpg','-markup.jpg');
+            f.style.backgroundImage = newURL;
+        }
+    }
+    else {
+        p.innerHTML = 'ON';
+        b.innerHTML = 'Turn OFF';
+        t.classList.add('on');
+        for(f in forms){
+            let newURL = f.style.backgroundImage.replace('-markup.jpg','.jpg');
+            f.style.backgroundImage = newURL;
+        }
+
+    }
+}
+
 
 function scoreIt(testName, benchmark, grade, form) {
     console.log(`scoring ${testName}`)
@@ -217,7 +243,7 @@ function scoreIt(testName, benchmark, grade, form) {
        console.log(`so far: ${total}/${max}`)
    }
    const totalScore = document.querySelector(`#${testName}_total`);
-   totalScore.innerHTML = `Score:  <span>${total}/${max}</span>`
+   totalScore.innerHTML = `Score:  <span>${total} /${max}</span>`
 }
 
 function reset(section) {
@@ -536,7 +562,7 @@ let b2_g6_a = [
 		return [rtl_fraction('4 1/9', [2,4,7], answer, false), getMax([2,4,7])] 
 	}, 
 	function b2_g6_a_6(answer) {
-		return [rtl_1ans('78.40', [1,2,3,4,5], answer), getMax([1,2,3,4,5])] 
+		return [rtl_1ans('78.4', [1,2,3,4,5], answer), getMax([1,2,3,4,5])] 
 	}, 
 	function b2_g6_a_7(answer) {
 		return [rtl_1ans('68.59', [1,2,3,4,5], answer), getMax([1,2,3,4,5])] 
@@ -557,7 +583,7 @@ let b2_g6_a = [
 		return [ltr_div('156', [6,12,18], answer), getMax([6,12,18])] 
 	}, 
 	function b2_g6_a_13(answer) {
-		return [rtl_1ans('13.650', [2,4,6,9,12,15], answer), getMax([2,4,6,9,12,15])] 
+		return [rtl_1ans('13.65', [2,4,6,9,12,15], answer), getMax([2,4,6,9,12,15])] 
 	}, 
 	function b2_g6_a_14(answer) {
 		return [ltr_div('3.6', [4,8,12], answer), getMax([4,8,12])] 
@@ -611,7 +637,7 @@ let b2_g6_b = [
 		return [rtl_1ans('46.851', [2,4,6,9,12,15], answer), getMax([2,4,6,9,12,15])] 
 	}, 
 	function b2_g6_b_14(answer) {
-		return [ltr_div('.7', [3,6], answer), getMax([3,6])] 
+		return [ltr_div('0.7', [3,6], answer), getMax([3,6])] 
 	}, 
 	function b2_g6_b_15(answer) {
 		return [rtl_1ans('1.75', [1,2,3,4], answer), getMax([1,2,3,4])] 
@@ -2192,7 +2218,7 @@ let b3_g6_a = [
 		return [rtl_1ans('50.735', [2,4,6,9,12,15], answer), getMax([2,4,6,9,12,15])] 
 	}, 
 	function b3_g6_a_14(answer) {
-		return [ltr_div('.6', [3,6], answer), getMax([3,6])] 
+		return [ltr_div('0.6', [3,6], answer), getMax([3,6])] 
 	}, 
 	function b3_g6_a_15(answer) {
 		return [rtl_1ans('2.34', [1,2,3,4], answer), getMax([1,2,3,4])] 
@@ -2222,7 +2248,7 @@ let b3_g6_b = [
 		]
 	}, 
 	function b3_g6_b_6(answer) {
-		return [rtl_1ans('30.50', [1,2,3,4,5], answer), getMax([1,2,3,4,5])] 
+		return [rtl_1ans('30.5', [1,2,3,4,5], answer), getMax([1,2,3,4,5])] 
 	}, 
 	function b3_g6_b_7(answer) {
 		return [rtl_1ans('72.57', [1,2,3,4,5], answer), getMax([1,2,3,4,5])] 
@@ -2234,7 +2260,7 @@ let b3_g6_b = [
 		return [ltr_div('320', [3,6,10], answer), getMax([3,6,10])] 
 	}, 
 	function b3_g6_b_10(answer) {
-		return [rtl_1ans('6.10', [1,2,3,4], answer), getMax([1,2,3,4])] 
+		return [rtl_1ans('6.1', [1,2,3,4], answer), getMax([1,2,3,4])] 
 	}, 
 	function b3_g6_b_11(answer) {
 		return [rtl_1ans('28.8', [1,2,3,4], answer), getMax([1,2,3,4])] 
@@ -2253,5 +2279,389 @@ let b3_g6_b = [
 	}, 
 	function b3_g6_b_16(answer) {
 		return [ltr_div('40.2', [4,7,10,14], answer), getMax([4,7,10,14])] 
+	}
+]
+
+let b1_g1_a = [
+	function b1_g1_a_1(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_2(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_3(answer) {
+		return [rtl_1ans('14', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_4(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_5(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_6(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_7(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_8(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_9(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_10(answer) {
+		return [rtl_1ans('5', [1,], answer), getMax([1,])] 
+	}, 
+	function b1_g1_a_11(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_12(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_13(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_14(answer) {
+		return [rtl_1ans('14', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_15(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_16(answer) {
+		return [rtl_1ans('1', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_17(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_18(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_19(answer) {
+		return [rtl_1ans('13', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_20(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_21(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_22(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_a_23(answer) {
+		return [rtl_1ans('16', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_a_24(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}
+]
+
+let b1_g1_b = [
+	function b1_g1_b_1(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_2(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_3(answer) {
+		return [rtl_1ans('12', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_4(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_5(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_6(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_7(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_8(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_9(answer) {
+		return [rtl_1ans('17', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_10(answer) {
+		return [rtl_1ans('3', [1,], answer), getMax([1,])] 
+	}, 
+	function b1_g1_b_11(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_12(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_13(answer) {
+		return [rtl_1ans('12', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_14(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_15(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_16(answer) {
+		return [rtl_1ans('19', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_17(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_18(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_19(answer) {
+		return [rtl_1ans('19', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_20(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_21(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b1_g1_b_22(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_23(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g1_b_24(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}
+]
+
+let b2_g1_a = [
+	function b2_g1_a_1(answer) {
+		return [rtl_1ans('7', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_2(answer) {
+		return [rtl_1ans('11', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_3(answer) {
+		return [rtl_1ans('12', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_4(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_5(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_6(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_7(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_8(answer) {
+		return [rtl_1ans('12', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_9(answer) {
+		return [rtl_1ans('14', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_10(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_11(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_12(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_13(answer) {
+		return [rtl_1ans('14', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_14(answer) {
+		return [rtl_1ans('13', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_15(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_16(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_17(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_18(answer) {
+		return [rtl_1ans('5', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_19(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_20(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_21(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b2_g1_a_22(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_23(answer) {
+		return [rtl_1ans('19', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_a_24(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}
+]
+
+let b2_g1_b = [
+	function b2_g1_b_1(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g1_b_2(answer) {
+		return [rtl_1ans('5', [1], answer), getMax([1])] 
+	}
+]
+
+let b3_g1_a = [
+	function b3_g1_a_1(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_2(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_3(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_4(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_5(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_6(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_7(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_8(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_9(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_10(answer) {
+		return [rtl_1ans('5', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_11(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_12(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_13(answer) {
+		return [rtl_1ans('12', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_14(answer) {
+		return [rtl_1ans('14', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_15(answer) {
+		return [rtl_1ans('12', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_16(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_17(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_18(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_19(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_20(answer) {
+		return [rtl_1ans('14', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_21(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_a_22(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_23(answer) {
+		return [rtl_1ans('16', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_a_24(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}
+]
+
+let b3_g1_b = [
+	function b3_g1_b_1(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_2(answer) {
+		return [rtl_1ans('13', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_3(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_4(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_5(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_6(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_7(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_8(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_9(answer) {
+		return [rtl_1ans('19', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_10(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_11(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_12(answer) {
+		return [rtl_1ans('20', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_13(answer) {
+		return [rtl_1ans('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_14(answer) {
+		return [rtl_1ans('16', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_15(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_16(answer) {
+		return [rtl_1ans('19', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_17(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_18(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_19(answer) {
+		return [rtl_1ans('18', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_20(answer) {
+		return [rtl_1ans('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_21(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g1_b_22(answer) {
+		return [rtl_1ans('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_23(answer) {
+		return [rtl_1ans('19', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g1_b_24(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
 	}
 ]
