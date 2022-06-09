@@ -66,6 +66,16 @@ for test in data:
                 else:
                     line += ' false)'
             line += f"), getMax(getDigitList({s})) \n\t\t]\n" + "\t}"
+        elif method == '5':
+            line += f"\t\treturn [ratio_exact('{row['Answer']}', {row['Scores']}, answer), getMax({row['Scores']})] \n" + "\t}"
+        elif method == '6':
+            line += f"\t\treturn [single_exact_answer('{row['Answer']}', {row['Scores']}, answer), getMax({row['Scores']})] \n" + "\t}"
+        elif method == '7':
+            line += f"\t\treturn [multiple_exact_answers('{row['Answer']}', {row['Scores']}, answer), getMax({row['Scores']})] \n" + "\t}"
+        elif method == '8':
+            line += f"\t\treturn [num_correct('{row['Answer']}', {row['Scores']}, answer), getMax({row['Scores']})] \n" + "\t}"
+        elif method == '9':
+            line += f"\t\treturn [solves_equation('{row['Answer']}',{row['Scores']}, answer), getMax({row['Scores']})] \n" + "\t}"
         else:
             line += f"\t\treturn [0, getMax({row['Scores']})] \n\t" + "}"
         

@@ -1,0 +1,807 @@
+/* Note: these CAP worksheets are consistently inconsistent. Hardcoded each one separately because I see no predictable patterns here. */
+#b1_g3_c>.grid>.problem,
+#b1_g3_d>.grid>.problem,
+#b1_g3_e>.grid>.problem,
+#b1_g3_f>.grid>.problem,
+#b2_g3_c>.grid>.problem,
+#b2_g3_d>.grid>.problem,
+#b2_g3_e>.grid>.problem,
+#b2_g3_f>.grid>.problem,
+#b3_g3_c>.grid>.problem,
+#b3_g3_d>.grid>.problem,
+#b3_g3_e>.grid>.problem,
+#b3_g3_f>.grid>.problem
+{
+    position: absolute;
+    padding: 0;
+}
+
+#b1_g3_c>.grid>.problem>input,
+#b1_g3_d>.grid>.problem>input,
+#b1_g3_e>.grid>.problem>input,
+#b1_g3_f>.grid>.problem>input,
+#b2_g3_c>.grid>.problem>input,
+#b2_g3_d>.grid>.problem>input,
+#b2_g3_e>.grid>.problem>input,
+#b2_g3_f>.grid>.problem>input,
+#b3_g3_c>.grid>.problem>input,
+#b3_g3_d>.grid>.problem>input,
+#b3_g3_e>.grid>.problem>input,
+#b3_g3_f>.grid>.problem>input
+{
+    width: 100%;
+    height:100%;
+    margin: 0;
+}
+#b1_g3_c>.grid>.problem>.solution,
+#b1_g3_d>.grid>.problem>.solution,
+#b1_g3_e>.grid>.problem>.solution,
+#b2_g3_c>.grid>.problem>.solution,
+#b2_g3_d>.grid>.problem>.solution,
+#b2_g3_e>.grid>.problem>.solution,
+#b3_g3_c>.grid>.problem>.solution,
+#b3_g3_d>.grid>.problem>.solution,
+#b3_g3_e>.grid>.problem>.solution
+{
+    display:inline;
+    align-items: start;
+}
+/************************/
+/*      Benchmark 1     */
+/************************/
+/* Page 1 (aka Form 'C') */
+#b1_g3_c>.grid>.problem:nth-child(1)
+{
+    top: 170px;
+    left: 130px;
+    width: 10px;
+    height: 10px;
+}
+
+#b1_g3_c>.grid>.problem:nth-child(2)
+{
+    top: 170px;
+    left: 190px;
+    width: 20px;
+    height: 10px;
+}
+
+#b1_g3_c>.grid>.problem:nth-child(3)
+{
+    top: 390px;
+    left: 70px;
+    width: 80px;
+    height: 130px;
+}
+
+#b1_g3_c>.grid>.problem:nth-child(4)
+{
+    top: 635px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+
+#b1_g3_c>.grid>.problem:nth-child(5)
+{
+    top: 635px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(6)
+{
+    top: 660px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(7)
+{
+    top: 660px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(8)
+{
+    top: 685px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(9)
+{
+    top: 685px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(10)
+{
+    top: 715px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(11)
+{
+    top: 715px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_c>.grid>.problem:nth-child(12)
+{
+    top: 815px;
+    left: 160px;
+    width: 30px;
+    height: 10px;
+}
+#b1_g3_c>.grid>.problem:nth-child(13)
+{
+    top: 960px;
+    left: 150px;
+    width: 20px;
+    height: 10px;
+}
+#b1_g3_c>.grid>.problem:nth-child(14)
+{
+    top: 1020px;
+    left: 150px;
+    width: 20px;
+    height: 10px;
+}
+
+/* Page 2 (aka Form 'D') */
+
+#b1_g3_d>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 20px;
+    width: 20px;
+    height: 10px;
+}
+#b1_g3_d>.grid>.problem:nth-child(2)
+{
+    top: 70px;
+    left: 720px;
+    width: 20px;
+    height: 10px;
+}
+
+#b1_g3_d>.grid>.problem:nth-child(3)
+{
+    top: 210px;
+    left: 170px;
+    width: 30px;
+    height: 60px;
+}
+
+#b1_g3_d>.grid>.problem:nth-child(4)
+{
+    top: 210px;
+    left: 380px;
+    width: 30px;
+    height: 60px;
+}
+
+#b1_g3_d>.grid>.problem:nth-child(5)
+{
+    top: 370px;
+    left: 50px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_d>.grid>.problem:nth-child(6)
+{
+    top: 630px;
+    left: 550px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_d>.grid>.problem:nth-child(7)
+{
+    top: 780px;
+    left: 730px;
+    width: 30px;
+    height: 8px;
+}
+#b1_g3_d>.grid>.problem:nth-child(7)::before
+{
+    content: "Is the answer correct? Y/N";
+    width: 100px;
+    display:block;
+    color: red;
+    padding-bottom: 5px;
+}
+#b1_g3_d>.grid>.problem:nth-child(8)
+{
+    top: 950px;
+    left: 360px;
+    width: 30px;
+    height: 8px;
+}
+
+/* Page 3 (aka form "e") */
+
+#b1_g3_e>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 430px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g3_e>.grid>.problem:nth-child(2)
+{
+    top: 260px;
+    left: 340px;
+    width: 20px;
+    height: 5px;
+}
+
+#b1_g3_e>.grid>.problem:nth-child(3)
+{
+    top: 340px;
+    left: 350px;
+    width: 20px;
+    height: 10px;
+}
+
+#b1_g3_e>.grid>.problem:nth-child(4)
+{
+    top: 440px;
+    left: 110px;
+    width: 10px;
+    height: 10px;
+}
+
+#b1_g3_e>.grid>.problem:nth-child(5)
+{
+    top: 440px;
+    left: 160px;
+    width: 20px;
+    height: 10px;
+}
+
+#b1_g3_e>.grid>.problem:nth-child(6)
+{
+    top: 610px;
+    left: 110px;
+    width: 30px;
+    height: 10px;
+}
+
+#b1_g3_e>.grid>.problem:nth-child(7)
+{
+    top: 770px;
+    left: 100px;
+    width: 40px;
+    height: 10px;
+}
+
+/* Form f */
+
+#b1_g3_f>.grid>.problem:nth-child(1)
+{
+    top: -50px;
+    left: 760px;
+    width: 30px;
+    height: 10px;
+}
+#b1_g3_f>.grid>.problem:nth-child(2)
+{
+    top: 190px;
+    left: 30px;
+    width: 40px;
+    height: 10px;
+}
+
+
+
+/*****************/
+/*  Benchmark 2  */
+/*****************/
+
+/* Page 1 (aka Form 'C') */
+#b2_g3_c>.grid>.problem:nth-child(1)
+{
+    top: 170px;
+    left: 130px;
+    width: 10px;
+    height: 10px;
+}
+
+#b2_g3_c>.grid>.problem:nth-child(2)
+{
+    top: 170px;
+    left: 190px;
+    width: 20px;
+    height: 10px;
+}
+
+#b2_g3_c>.grid>.problem:nth-child(3)
+{
+    top: 390px;
+    left: 70px;
+    width: 80px;
+    height: 130px;
+}
+
+#b2_g3_c>.grid>.problem:nth-child(4)
+{
+    top: 635px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+
+#b2_g3_c>.grid>.problem:nth-child(5)
+{
+    top: 635px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(6)
+{
+    top: 660px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(7)
+{
+    top: 660px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(8)
+{
+    top: 685px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(9)
+{
+    top: 685px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(10)
+{
+    top: 715px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(11)
+{
+    top: 715px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_c>.grid>.problem:nth-child(12)
+{
+    top: 815px;
+    left: 160px;
+    width: 30px;
+    height: 10px;
+}
+#b2_g3_c>.grid>.problem:nth-child(13)
+{
+    top: 960px;
+    left: 150px;
+    width: 20px;
+    height: 10px;
+}
+#b2_g3_c>.grid>.problem:nth-child(14)
+{
+    top: 1020px;
+    left: 150px;
+    width: 20px;
+    height: 10px;
+}
+
+/* Page 2 (aka Form 'D') */
+
+#b2_g3_d>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 20px;
+    width: 20px;
+    height: 10px;
+}
+#b2_g3_d>.grid>.problem:nth-child(2)
+{
+    top: 110px;
+    left: 30px;
+    width: 20px;
+    height: 10px;
+}
+
+#b2_g3_d>.grid>.problem:nth-child(3)
+{
+    top: 200px;
+    left: 170px;
+    width: 30px;
+    height: 60px;
+}
+
+#b2_g3_d>.grid>.problem:nth-child(4)
+{
+    top: 200px;
+    left: 380px;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+}
+
+#b2_g3_d>.grid>.problem:nth-child(5)
+{
+    top: 370px;
+    left: 40px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_d>.grid>.problem:nth-child(6)
+{
+    top: 670px;
+    left: 100px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_d>.grid>.problem:nth-child(7)
+{
+    top: 790px;
+    left: 730px;
+    width: 30px;
+    height: 8px;
+}
+#b2_g3_d>.grid>.problem:nth-child(7)::before
+{
+    content: "Is the answer correct? Y/N";
+    width: 100px;
+    display:block;
+    color: red;
+    padding-bottom: 5px;
+}
+#b2_g3_d>.grid>.problem:nth-child(8)
+{
+    top: 970px;
+    left: 20px;
+    width: 30px;
+    height: 8px;
+}
+
+/* Page 3 (aka form "e") */
+
+#b2_g3_e>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 430px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g3_e>.grid>.problem:nth-child(2)
+{
+    top: 260px;
+    left: 340px;
+    width: 20px;
+    height: 5px;
+}
+
+#b2_g3_e>.grid>.problem:nth-child(3)
+{
+    top: 340px;
+    left: 350px;
+    width: 20px;
+    height: 10px;
+}
+
+#b2_g3_e>.grid>.problem:nth-child(4)
+{
+    top: 440px;
+    left: 110px;
+    width: 10px;
+    height: 10px;
+}
+
+#b2_g3_e>.grid>.problem:nth-child(5)
+{
+    top: 440px;
+    left: 160px;
+    width: 20px;
+    height: 10px;
+}
+
+#b2_g3_e>.grid>.problem:nth-child(6)
+{
+    top: 610px;
+    left: 110px;
+    width: 30px;
+    height: 10px;
+}
+
+#b2_g3_e>.grid>.problem:nth-child(7)
+{
+    top: 760px;
+    left: 80px;
+    width: 40px;
+    height: 10px;
+}
+
+/* Form f */
+
+#b2_g3_f>.grid>.problem:nth-child(1)
+{
+    top: -50px;
+    left: 750px;
+    width: 30px;
+    height: 10px;
+}
+#b2_g3_f>.grid>.problem:nth-child(2)
+{
+    top: 160px;
+    left: 80px;
+    width: 30px;
+    height: 10px;
+}
+
+
+/********************/
+/*  Benchmark 3     */
+/********************/
+
+/* Page 1 (aka Form 'C') */
+#b3_g3_c>.grid>.problem:nth-child(1)
+{
+    top: 170px;
+    left: 130px;
+    width: 10px;
+    height: 10px;
+}
+
+#b3_g3_c>.grid>.problem:nth-child(2)
+{
+    top: 170px;
+    left: 190px;
+    width: 20px;
+    height: 10px;
+}
+
+#b3_g3_c>.grid>.problem:nth-child(3)
+{
+    top: 390px;
+    left: 70px;
+    width: 80px;
+    height: 130px;
+}
+
+#b3_g3_c>.grid>.problem:nth-child(4)
+{
+    top: 635px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+
+#b3_g3_c>.grid>.problem:nth-child(5)
+{
+    top: 635px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(6)
+{
+    top: 660px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(7)
+{
+    top: 660px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(8)
+{
+    top: 685px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(9)
+{
+    top: 685px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(10)
+{
+    top: 715px;
+    left: 150px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(11)
+{
+    top: 715px;
+    left: 300px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_c>.grid>.problem:nth-child(12)
+{
+    top: 815px;
+    left: 160px;
+    width: 30px;
+    height: 10px;
+}
+#b3_g3_c>.grid>.problem:nth-child(13)
+{
+    top: 960px;
+    left: 150px;
+    width: 20px;
+    height: 10px;
+}
+#b3_g3_c>.grid>.problem:nth-child(14)
+{
+    top: 1020px;
+    left: 150px;
+    width: 20px;
+    height: 10px;
+}
+
+/* Page 2 (aka Form 'D') */
+
+#b3_g3_d>.grid>.problem:nth-child(1)
+{
+    top: -50px;
+    left: 720px;
+    width: 20px;
+    height: 10px;
+}
+#b3_g3_d>.grid>.problem:nth-child(2)
+{
+    top: 105px;
+    left: 70px;
+    width: 40px;
+    height: 10px;
+}
+
+#b3_g3_d>.grid>.problem:nth-child(3)
+{
+    top: 220px;
+    left: 170px;
+    width: 30px;
+    height: 60px;
+}
+
+#b3_g3_d>.grid>.problem:nth-child(4)
+{
+    top: 220px;
+    left: 380px;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+}
+
+#b3_g3_d>.grid>.problem:nth-child(5)
+{
+    top: 350px;
+    left: 70px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_d>.grid>.problem:nth-child(6)
+{
+    top: 670px;
+    left: 40px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_d>.grid>.problem:nth-child(7)
+{
+    top: 780px;
+    left: 730px;
+    width: 30px;
+    height: 8px;
+}
+#b3_g3_d>.grid>.problem:nth-child(7)::before
+{
+    content: "Is the answer correct? Y/N";
+    width: 100px;
+    display:block;
+    color: red;
+    padding-bottom: 5px;
+}
+#b3_g3_d>.grid>.problem:nth-child(8)
+{
+    top: 970px;
+    left: 30px;
+    width: 30px;
+    height: 8px;
+}
+
+/* Page 3 (aka form "e") */
+
+#b3_g3_e>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 20px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g3_e>.grid>.problem:nth-child(2)
+{
+    top: 260px;
+    left: 340px;
+    width: 20px;
+    height: 5px;
+}
+
+#b3_g3_e>.grid>.problem:nth-child(3)
+{
+    top: 340px;
+    left: 350px;
+    width: 20px;
+    height: 10px;
+}
+
+#b3_g3_e>.grid>.problem:nth-child(4)
+{
+    top: 440px;
+    left: 210px;
+    width: 10px;
+    height: 10px;
+}
+
+#b3_g3_e>.grid>.problem:nth-child(5)
+{
+    top: 440px;
+    left: 260px;
+    width: 20px;
+    height: 10px;
+}
+
+#b3_g3_e>.grid>.problem:nth-child(6)
+{
+    top: 610px;
+    left: 110px;
+    width: 30px;
+    height: 10px;
+}
+
+#b3_g3_e>.grid>.problem:nth-child(7)
+{
+    top: 760px;
+    left: 30px;
+    width: 40px;
+    height: 10px;
+}
+
+/* Form f */
+
+#b3_g3_f>.grid>.problem:nth-child(1)
+{
+    top: -50px;
+    left: 760px;
+    width: 30px;
+    height: 10px;
+}
+#b3_g3_f>.grid>.problem:nth-child(2)
+{
+    top: 190px;
+    left: 30px;
+    width: 40px;
+    height: 10px;
+}

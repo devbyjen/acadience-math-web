@@ -1,9 +1,24 @@
+// This file contains most of the scoring logic of the entire project. buildJS.py includes all these functions in the final scoring file.
+// in the file key.csv, it has a column for "method type". Here are the types:
+// 1: single numeric answer, scored right to left on # correct digits (add, subtract, multiply)
+// 2: single fraction answer, scored right to left on # correct digits
+// 3: single numeric answer, scored left to right on # correct digits (divide)
+// 4: single fraction answer, but give bonus points for a simplified version
+// 5: single ratio answer, standardized and then compared for exactness
+// 6: single string answer, standardized and compared for exactness
+// 7: multiple string answers, full marks if any match
+// 8: user enters # correct manually
+// 9: does answer solve an equation?
+
 // Helper function. Returns number of matching digits in two strings, comparing exact place value.
 // 300 = 300 ? return 3.
 // 003 = 300 ? return 1.
 //1234 = 4321? return 0.
 function get_num_correct_digits(correct_answer, answer, flip=false) {
-    
+    correct_answer = correct_answer.trim().replaceAll(' ','').replace('$','')
+    answer = answer.trim().replaceAll(' ','').replace('$','')
+
+
     //for right to left digit comparisons, reverse the strings before comparing.
     if(flip){
         correct_answer = correct_answer.split("").reverse().join("");
@@ -72,18 +87,31 @@ function format_fraction(answer){
     return obj
 }
 
+function format_ratio(answer){
+    obj = {}
+    answer = answer.trim().replace(' ','').replace('/',':')
+    obj.left = answer.substring(0,answer.indexOf(':'))
+    obj.right = answer.substr(answer.indexOf(':')+1)
+    return obj
+}
+
 
 // SCORING FUNCTIONS
 // All have scores as a param - required to be an array of possible, nonzero scores. 
 // Number of digits correct = array position returned.
 
 // Scoring for single-answer computation problems, scored right to left
+// method type: 1
 function rtl_1ans(correct_answer, scores, answer) {
-    answer = answer.replace(/,/, '')
-    let num = get_num_correct_digits(correct_answer, answer, true)
-    if(num == 0)
+    try{
+        answer = answer.replace(/,/, '')
+        let num = get_num_correct_digits(correct_answer, answer, true)
+        if(num == 0)
+            return 0
+        return scores[num-1]
+    } catch {
         return 0
-    return scores[num-1]
+    }
 }
 
 // Scoring for fractions
@@ -92,96 +120,262 @@ function rtl_1ans(correct_answer, scores, answer) {
 // Scoring for fractions
 // answer formatting: object with possible keys: whole, top, bottom.
 // values inside answer object must be strings
+// method type: 2
 function rtl_fraction(correct_answer, scores, answer, isBonus=false) {
-    let num = 0
-    if(typeof answer == 'undefined' || answer == ''){
-        console.log("Answer was undefined.")
+    try {
+        let num = 0
+        if(typeof answer == 'undefined' || answer == ''){
+            console.log("Answer was undefined.")
+            return 0
+        }
+        if(typeof correct_answer == 'string'){
+            correct_answer = format_fraction(correct_answer)
+        }
+        if(typeof answer == 'string') {
+            answer = format_fraction(answer)
+        }
+
+        if('whole' in correct_answer && 'whole' in answer){
+            num += get_num_correct_digits(correct_answer.whole, answer.whole, true)
+        }
+        if('top' in correct_answer && 'top' in answer){
+            num += get_num_correct_digits(correct_answer.top, answer.top, true)
+        }
+        if('bottom' in correct_answer && 'bottom' in answer){
+            num += get_num_correct_digits(correct_answer.bottom, answer.bottom, true)
+        }
+
+
+        //find number of digits in correct answer & answer
+        let numDigits = correct_answer.top.length + correct_answer.bottom.length
+        let actualDigits = answer.top.length + answer.bottom.length
+        if(correct_answer.whole){
+            numDigits+=correct_answer.whole.length
+        }
+        if(answer.whole){
+            actualDigits += answer.whole.length
+        }
+
+        //bonus answer must be EXACT, for the bonus points. Check if answer is longer than it should be, and return 0 if so.
+        //This catches edge case of 8 9/9 simplified = 9, but is giving full marks bc the right-to-left unsimplified answer(8 9/9) ends with the full bonus answer (9)
+        if(isBonus && actualDigits != numDigits){
+            return 0
+        }
+
+        //test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
+        console.log(`Digits correct: ${num}/${numDigits}`)
+        if(!isBonus && num < numDigits){
+            console.log(`Testing for nonstandard. correct: ${correct_answer.whole} ${correct_answer.top}/${correct_answer.bottom}  answer: ${answer.whole} ${answer.top}/${answer.bottom}`)
+            let correct_as_decimal = 0
+            correct_as_decimal += correct_answer.whole? parseFloat(correct_answer.whole):0
+            correct_as_decimal += parseFloat(correct_answer.top/correct_answer.bottom)
+            let answer_as_decimal = 0
+            answer_as_decimal += answer.whole? parseFloat(answer.whole):0
+            answer_as_decimal += parseFloat(answer.top/answer.bottom)
+
+            //Give top nonbonus score, because whatever they wrote is technically correct.
+            if(correct_as_decimal == answer_as_decimal) {
+                console.log(`${correct_as_decimal} = ${answer_as_decimal}, giving full (non-bonus) points.`)
+                return scores[scores.length-1] 
+            }
+        }
+        if(num == 0){
+
+            return 0
+        }
+        console.log(`score: ${scores[num-1]}`)
+        return scores[num-1]
+    } catch {
         return 0
     }
-    if(typeof correct_answer == 'string'){
-        correct_answer = format_fraction(correct_answer)
-    }
-    if(typeof answer == 'string') {
-        answer = format_fraction(answer)
-    }
-
-    if('whole' in correct_answer && 'whole' in answer){
-        num += get_num_correct_digits(correct_answer.whole, answer.whole, true)
-    }
-    if('top' in correct_answer && 'top' in answer){
-        num += get_num_correct_digits(correct_answer.top, answer.top, true)
-    }
-    if('bottom' in correct_answer && 'bottom' in answer){
-        num += get_num_correct_digits(correct_answer.bottom, answer.bottom, true)
-    }
-
-
-    //find number of digits in correct answer & answer
-    let numDigits = correct_answer.top.length + correct_answer.bottom.length
-    let actualDigits = answer.top.length + answer.bottom.length
-    if(correct_answer.whole){
-        numDigits+=correct_answer.whole.length
-    }
-    if(answer.whole){
-        actualDigits += answer.whole.length
-    }
-
-    //bonus answer must be EXACT, for the bonus points. Check if answer is longer than it should be, and return 0 if so.
-    //This catches edge case of 8 9/9 simplified = 9, but is giving full marks bc the right-to-left unsimplified answer(8 9/9) ends with the full bonus answer (9)
-    if(isBonus && actualDigits != numDigits){
-        return 0
-    }
-
-    //test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
-    console.log(`Digits correct: ${num}/${numDigits}`)
-	if(!isBonus && num < numDigits){
-		console.log(`Testing for nonstandard. correct: ${correct_answer.whole} ${correct_answer.top}/${correct_answer.bottom}  answer: ${answer.whole} ${answer.top}/${answer.bottom}`)
-		let correct_as_decimal = 0
-        correct_as_decimal += correct_answer.whole? parseFloat(correct_answer.whole):0
-        correct_as_decimal += parseFloat(correct_answer.top/correct_answer.bottom)
-        let answer_as_decimal = 0
-        answer_as_decimal += answer.whole? parseFloat(answer.whole):0
-        answer_as_decimal += parseFloat(answer.top/answer.bottom)
-
-		//Give top nonbonus score, because whatever they wrote is technically correct.
-		if(correct_as_decimal == answer_as_decimal) {
-            console.log(`${correct_as_decimal} = ${answer_as_decimal}, giving full (non-bonus) points.`)
-            return scores[scores.length-1] 
-		}
-	}
-    if(num == 0){
-
-        return 0
-    }
-    console.log(`score: ${scores[num-1]}`)
-    return scores[num-1]
 }
 
 // Scoring for division problems
 // answer formatting: object with possible keys: whole, rem.
 // values inside answer object must be strings
+// method type: 3
 function ltr_div(correct_answer, scores, answer) {
-    let num = 0
-    if(typeof correct_answer == 'string'){
-        correct_answer = format_remainder(correct_answer)
-    }
-    if(typeof answer == 'string') {
-        answer = format_remainder(answer)
-    }
-    
-    console.log(`Scoring division problem. Correct answer: ${correct_answer.whole}r${correct_answer.rem} Answer: ${answer.whole}r${answer.rem}`)
-    if('whole' in correct_answer && 'whole' in answer){
-        num += get_num_correct_digits(correct_answer.whole, answer.whole)
-        console.log("# correct in whole: "+num)
-    }
-    if('rem' in correct_answer && 'rem' in answer){
-        num += get_num_correct_digits(correct_answer.rem, answer.rem)
-        console.log("# correct with rem: " + num)
-    }
-    if(num == 0)
+    try{
+        let num = 0
+        if(typeof correct_answer == 'string'){
+            correct_answer = format_remainder(correct_answer)
+        }
+        if(typeof answer == 'string') {
+            answer = format_remainder(answer)
+        }
+        
+        console.log(`Scoring division problem. Correct answer: ${correct_answer.whole}r${correct_answer.rem} Answer: ${answer.whole}r${answer.rem}`)
+        if('whole' in correct_answer && 'whole' in answer){
+            num += get_num_correct_digits(correct_answer.whole, answer.whole)
+            console.log("# correct in whole: "+num)
+        }
+        if('rem' in correct_answer && 'rem' in answer){
+            num += get_num_correct_digits(correct_answer.rem, answer.rem)
+            console.log("# correct with rem: " + num)
+        }
+        if(num == 0)
+            return 0
+        return scores[num-1]
+    } catch {
         return 0
-    return scores[num-1]
+    }
 }
+
+// method type: 4 is for fractions with multiple correct answers (bonus points for a simplified answer.) This logic is found in buildJS.py, and then used to build score.js
+
+
+// Scoring for ratio problems. Exact answer only (or equivalent)
+// answer formatting: string
+// format both answers to remove commas, whitespace, etc.
+// method type: 5
+function ratio_exact(correct_answer, scores, answer) {
+    try{
+        console.log("scoring a ratio")
+        let num = 0
+        if(typeof answer == 'undefined' || answer == ''){
+            console.log("Answer was undefined.")
+            return 0
+        }
+        correct_answer = format_ratio(correct_answer)
+        answer = format_ratio(answer)
+        
+        console.log("correct: " + correct_answer.left + ":" + correct_answer.right 
+        + "\nanswer: "+answer.left + ":" + answer.right)
+
+        if('left' in correct_answer && 'left' in answer){
+            num += get_num_correct_digits(correct_answer.left, answer.left, true)
+        }
+        if('right' in correct_answer && 'right' in answer){
+            num += get_num_correct_digits(correct_answer.right, answer.right, true)
+        }
+
+
+        console.log("num correct: "+num)
+
+        //find number of digits in correct answer & answer
+        let numDigits = correct_answer.left.length + correct_answer.right.length
+        let actualDigits = answer.left.length + answer.right.length
+
+        //test for nonstandard, but correct answer. Make sure not to give the extra points for simplified answer
+        console.log(`Digits correct: ${num}/${numDigits}`)
+        if(num < numDigits){
+            console.log(`Testing for nonstandard. correct: ${correct_answer.left}:${correct_answer.right}  answer: ${answer.left}:${answer.right}`)
+            let correct_as_decimal = 0
+            correct_as_decimal += parseFloat(correct_answer.left/correct_answer.right)
+            let answer_as_decimal = 0
+            answer_as_decimal += parseFloat(answer.left/answer.right)
+
+            //Give top nonbonus score, because whatever they wrote is technically correct.
+            if(correct_as_decimal == answer_as_decimal) {
+                console.log(`${correct_as_decimal} = ${answer_as_decimal}, giving full points.`)
+                return scores[0] 
+            }
+        }
+        console.log("here 1")
+        if(num == 0){
+            return 0
+        }
+        return scores[0]
+    } catch {
+        return 0
+    }
+}
+
+// Scoring for problems with one exact answer only, no equivalents
+// answer formatting: string
+// method type: 6
+function single_exact_answer(correct_answer, scores, answer) {
+    try{
+        //standardize numerical strings by removing whitespace and commas
+        correct_answer=correct_answer.trim().replaceAll(',','').toLowerCase()
+        answer = answer.trim().replaceAll(',','').toLowerCase()
+        if(correct_answer == answer){
+            return scores[0]
+        }
+        return 0
+     } catch {
+        return 0
+    }
+}
+
+// Scoring for problems with multiple non-numerical acceptable answers 
+//answer formatting: string
+// correct_answer formatting: array of strings
+// method type: 7
+function multiple_exact_answers(correct_answer, scores, answer) {
+    try{
+        console.log("multip answer")
+        let correct_answers
+        if(typeof(correct_answer) == 'array'){
+            correct_answers = correct_answer
+        } else if(typeof(correct_answer) == 'string'){
+            correct_answers = correct_answer.trim().replace('(','').replace(')','').split(',')
+        }
+
+        
+        answer = answer.trim().replace(' ','').toLowerCase()
+        for(let c in correct_answers){
+            let cor = correct_answers[c].trim().replace(' ','').toLowerCase()
+            console.log("comparing cor: " + cor + " and answer: " + answer)
+            if(cor == answer){
+                console.log("match!")
+                return scores[0]
+            }
+        }
+        return 0
+    } catch {
+       return 0
+   }
+
+}
+
+// scorer compares how many items were completed successfully.
+// method type: 8
+function num_correct(correct_answer, scores, answer) {
+    try{
+        if(!answer || answer == '0'){
+            return 0
+        }
+        let num = parseInt(answer)
+        if(num > scores.length || num < 0){
+            console.log('invalid number correct')
+            return 0
+        }
+        return scores[num-1]
+    } catch {
+       return 0
+   }
+
+}
+
+// does their answer solve an equation?
+// correct_answer formatting: string equation, including x (to be replaced by their answer).
+// method type: 9
+function solves_equation(correct_answer, scores, answer) {
+    try{
+        console.log("Does the answer: " + answer + " solve the equation: " + correct_answer + "?")
+        let equation = correct_answer.replace('x', answer).replace('X', answer)
+        let left = equation.substring(0,equation.indexOf('='))
+        let right = equation.substring(equation.indexOf('=')+1)
+        console.log("left: " + left + " right: " + right)
+        try {
+            let a1=eval(left)
+            let a2=eval(right)
+            if(a1 == a2){
+                return scores[0]
+            }
+        } catch {
+            console.log("error evaluating equation. ")
+        }
+        return 0;
+    } catch {
+    return 0
+    }
+}
+
+//add a note for special problems with trouble.
+//This is done in the css with ::before
+
 
 function getMax(scores) {
     let max = 0
@@ -221,43 +415,97 @@ function toggleTeacherMode() {
 
 
 function scoreIt(testName, benchmark, grade, form) {
-    console.log(`scoring ${testName}`)
-   let total = 0
-   let max = 0
-   let possible = 0
-   let problems = document.querySelectorAll(`#${testName} .problem`)
-   console.log(`${problems.length} problems found`)
-   for(let i=0;i<problems.length;i++){
-       let answer = problems[i].children[0]
-       let solution = problems[i].children[1]
-       returns = eval(`${testName}[i](answer.value)`)
-       score = returns[0]
-       possible = returns[1]
-       solution.innerHTML = `score: ${score}/${possible}`
-       if(score < possible){
-           solution.innerHTML = '<span class="wrong">' + solution.innerHTML + '</span>'
-       }
-       console.log(`${i+1}. ${score}/${possible}`)
-       total += parseInt(score)
-       max += parseInt(possible)
-       console.log(`so far: ${total}/${max}`)
-   }
-   const totalScore = document.querySelector(`#${testName}_total`);
-   totalScore.innerHTML = `Score:  <span>${total} /${max}</span>`
+    try {
+        console.log(`scoring ${testName}`)
+        let total = 0
+        let max = 0
+        let possible = 0
+        let problems = document.querySelectorAll(`#${testName} .problem`)
+        console.log(`${problems.length} problems found`)
+        for(let i=0;i<problems.length;i++){
+            let answer = problems[i].children[0]
+            let solution = problems[i].children[1]
+            returns = eval(`${testName}[i](answer.value)`)
+            score = returns[0]
+            possible = returns[1]
+            solution.innerHTML = `${score}/${possible}`
+            if(score < possible){
+                solution.innerHTML = '<span class="wrong">' + solution.innerHTML + '</span>'
+            } else {
+                solution.innerHTML = '<span class="right">' + solution.innerHTML + '</span>'
+            }
+            console.log(`${i+1}. ${score}/${possible}`)
+            total += parseInt(score)
+            max += parseInt(possible)
+            console.log(`so far: ${total}/${max}`)
+        }
+        const totalScore = document.querySelector(`#${testName}_total`);
+        totalScore.innerHTML = `Score:  <span>${total} /${max}</span>`
+    } catch (e) {
+        console.log("error in scoreIt function, testName "+ testName)
+    }
 }
 
 function reset(section) {
    console.log("resetting section " + section)
-   let problems = document.querySelectorAll(`#${section} .problem`)
-   let total = document.querySelector(`#${section} .total`)
-   total.innerHTML = "Score:"
+   try {
+        let problems = document.querySelectorAll(`#${section} .problem`)
+        let total = document.querySelector(`#${section} .total`)
+        total.innerHTML = "Score:"
 
-   for(let i=0;i<problems.length;i++){
-       console.log()
-       problems[i].children[0].value = ""
-       problems[i].children[1].innerHTML = ""
-   }
+        for(let i=0;i<problems.length;i++){
+            console.log()
+            problems[i].children[0].value = ""
+            problems[i].children[1].innerHTML = ""
+        }
+    } catch (e) {
+        console.log("error resetting section " + section)
+    }  
 
+}
+
+function resetCAP(bench, grade) {
+    reset(`b${bench}_g${grade}_c`)
+    reset(`b${bench}_g${grade}_d`)
+    reset(`b${bench}_g${grade}_e`)
+    reset(`b${bench}_g${grade}_f`)
+    reset(`b${bench}_g${grade}_g`)
+    let cap_final = document.querySelector('#CAP_total')
+    cap_final.innerHTML = 'Total CAP Score: '
+    
+    let top = document.getElementById(`b${bench}_g${grade}_c`)
+    console.log('focusing on: ' + top)
+    top.scrollIntoView()
+
+}
+
+function scoreAllCAP(bench,grade){
+    let totalScore = 0;
+    let totalPossible = 0;
+    let forms = ["c","d","e","f","g"];
+    console.log("scoring all CAP")
+    forms.forEach(i => {
+        testName = 'b' + bench + "_g" + grade + "_" + i
+        console.log("scoring " + testName)
+        scoreIt(testName, bench, grade, i);
+        try {
+            let range = document.getElementById(testName+"_total").innerHTML;
+            console.log("1: " + range)
+            range = range.replace("<span>","").replace("</span>","").replace("Score:","")
+            console.log("2: " + range);
+            let subtotal = parseInt(range.substring(0,range.indexOf('/')).trim());
+            console.log("subtotal: " + subtotal)
+            let maxx = parseInt(range.substring(range.indexOf('/')+1).trim());
+            console.log("maxx:" + maxx)
+            console.log("blah score: " + subtotal + " / " + maxx)
+            totalScore += subtotal
+            totalPossible += maxx
+        } catch (e) {
+            console.log('error adding ' + testName + ' to total CAP score.\n' + e.message)
+        }
+    });
+    let total_CAP_element = document.getElementById('CAP_total')
+    total_CAP_element.innerHTML = 'Total CAP Score: <span>' + totalScore + " / " + totalPossible + "</span>";
 }
 
 let b2_g4_a = [
@@ -2663,5 +2911,1715 @@ let b3_g1_b = [
 	}, 
 	function b3_g1_b_24(answer) {
 		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}
+]
+
+let b1_g2_c = [
+	function b1_g2_c_1a(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_1b(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_1c(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_1d(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_1e(answer) {
+		return [rtl_1ans('16', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g2_c_2(answer) {
+		return [single_exact_answer('3', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_3a(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_3b(answer) {
+		return [single_exact_answer('>', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_3c(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_4(answer) {
+		return [single_exact_answer('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_c_5(answer) {
+		return [rtl_1ans('15', [2,5], answer), getMax([2,5])] 
+	}, 
+	function b1_g2_c_6(answer) {
+		return [num_correct('2', [1,2], answer), getMax([1,2])] 
+	}
+]
+
+let b1_g2_d = [
+	function b1_g2_d_7(answer) {
+		return [rtl_1ans('11', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b1_g2_d_8(answer) {
+		return [rtl_1ans('4', [3], answer), getMax([3])] 
+	}, 
+	function b1_g2_d_9(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_d_10(answer) {
+		return [rtl_1ans('613', [3,5,8], answer), getMax([3,5,8])] 
+	}, 
+	function b1_g2_d_11(answer) {
+		return [rtl_1ans('14', [2,5], answer), getMax([2,5])] 
+	}, 
+	function b1_g2_d_12(answer) {
+		return [rtl_1ans('9', [4], answer), getMax([4])] 
+	}
+]
+
+let b1_g2_e = [
+	function b1_g2_e_13a(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_13b(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_13c(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_13d(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_13e(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_13f(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_14a(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b1_g2_e_14b(answer) {
+		return [rtl_1ans('25', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g2_e_15(answer) {
+		return [rtl_1ans('6', [7], answer), getMax([7])] 
+	}, 
+	function b1_g2_e_16(answer) {
+		return [rtl_1ans('71', [5,11], answer), getMax([5,11])] 
+	}
+]
+
+let b2_g2_c = [
+	function b2_g2_c_1a(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_1b(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_1c(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_2(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_3a(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_3b(answer) {
+		return [single_exact_answer('>', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_3c(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_4(answer) {
+		return [single_exact_answer('10', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_c_5(answer) {
+		return [rtl_1ans('14', [2,5], answer), getMax([2,5])] 
+	}, 
+	function b2_g2_c_6(answer) {
+		return [num_correct('2', [1,2], answer), getMax([1,2])] 
+	}
+]
+
+let b2_g2_d = [
+	function b2_g2_d_7(answer) {
+		return [rtl_1ans('14', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b2_g2_d_8(answer) {
+		return [rtl_1ans('5', [3], answer), getMax([3])] 
+	}, 
+	function b2_g2_d_9(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_d_10(answer) {
+		return [rtl_1ans('497', [3,5,8], answer), getMax([3,5,8])] 
+	}, 
+	function b2_g2_d_11(answer) {
+		return [rtl_1ans('20', [2,5], answer), getMax([2,5])] 
+	}
+]
+
+let b2_g2_e = [
+	function b2_g2_e_12(answer) {
+		return [rtl_1ans('9', [4], answer), getMax([4])] 
+	}, 
+	function b2_g2_e_13a(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_13b(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_13c(answer) {
+		return [rtl_1ans('5', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_13d(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_13e(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_13f(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_14a(answer) {
+		return [rtl_1ans('7', [1], answer), getMax([1])] 
+	}, 
+	function b2_g2_e_14b(answer) {
+		return [ltr_div('10', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g2_e_15(answer) {
+		return [rtl_1ans('2', [7], answer), getMax([7])] 
+	}, 
+	function b2_g2_e_16(answer) {
+		return [rtl_1ans('37', [4,8], answer), getMax([4,8])] 
+	}
+]
+
+let b3_g2_c = [
+	function b3_g2_c_1a(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_1b(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_1c(answer) {
+		return [rtl_1ans('3', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_1d(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_2(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_3a(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_3b(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_3c(answer) {
+		return [single_exact_answer('>', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_4(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_c_5(answer) {
+		return [rtl_1ans('22', [2,5], answer), getMax([2,5])] 
+	}, 
+	function b3_g2_c_6(answer) {
+		return [num_correct('2', [1,2], answer), getMax([1,2])] 
+	}
+]
+
+let b3_g2_d = [
+	function b3_g2_d_7(answer) {
+		return [rtl_1ans('14', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b3_g2_d_8(answer) {
+		return [rtl_1ans('6', [4], answer), getMax([4])] 
+	}, 
+	function b3_g2_d_9(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_d_10(answer) {
+		return [rtl_1ans('339', [3,5,8], answer), getMax([3,5,8])] 
+	}, 
+	function b3_g2_d_11(answer) {
+		return [rtl_1ans('23', [2,5], answer), getMax([2,5])] 
+	}
+]
+
+let b3_g2_e = [
+	function b3_g2_e_12(answer) {
+		return [rtl_1ans('6', [4], answer), getMax([4])] 
+	}, 
+	function b3_g2_e_13a(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_13b(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_13c(answer) {
+		return [rtl_1ans('2', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_13d(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_13e(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_13f(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_14a(answer) {
+		return [rtl_1ans('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g2_e_14b(answer) {
+		return [ltr_div('50', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g2_e_15(answer) {
+		return [rtl_1ans('8', [9], answer), getMax([9])] 
+	}, 
+	function b3_g2_e_16(answer) {
+		return [rtl_1ans('46', [4,9], answer), getMax([4,9])] 
+	}
+]
+
+let b1_g3_c = [
+	function b1_g3_c_1a(answer) {
+		return [rtl_1ans('8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_1b(answer) {
+		return [rtl_1ans('16', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g3_c_2(answer) {
+		return [rtl_fraction('4/6', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b1_g3_c_3a(answer) {
+		return [single_exact_answer('250', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3b(answer) {
+		return [single_exact_answer('300', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3c(answer) {
+		return [single_exact_answer('740', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3d(answer) {
+		return [single_exact_answer('700', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3e(answer) {
+		return [single_exact_answer('220', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3f(answer) {
+		return [single_exact_answer('200', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3g(answer) {
+		return [single_exact_answer('840', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_3h(answer) {
+		return [single_exact_answer('800', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_c_4(answer) {
+		return [rtl_1ans('15', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b1_g3_c_5a(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b1_g3_c_5b(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}
+]
+
+let b1_g3_d = [
+	function b1_g3_d_6(answer) {
+		return [rtl_1ans('9', [3], answer), getMax([3])] 
+	}, 
+	function b1_g3_d_7(answer) {
+		return [rtl_1ans('28', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b1_g3_d_8a(answer) {
+		return [rtl_fraction('5/1', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b1_g3_d_8b(answer) {
+		return [rtl_fraction('8/1', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b1_g3_d_9(answer) {
+		return [rtl_1ans('5', [4], answer), getMax([4])] 
+	}, 
+	function b1_g3_d_10(answer) {
+		return [rtl_1ans('2', [4], answer), getMax([4])] 
+	}, 
+	function b1_g3_d_11(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_d_12(answer) {
+		return [rtl_1ans('3', [4], answer), getMax([4])] 
+	}
+]
+
+let b1_g3_e = [
+	function b1_g3_e_13(answer) {
+		return [rtl_1ans('72', [4,8], answer), getMax([4,8])] 
+	}, 
+	function b1_g3_e_14(answer) {
+		return [rtl_1ans('6', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_e_15(answer) {
+		return [rtl_1ans('32', [3,7], answer), getMax([3,7])] 
+	}, 
+	function b1_g3_e_16a(answer) {
+		return [rtl_1ans('9', [1], answer), getMax([1])] 
+	}, 
+	function b1_g3_e_16b(answer) {
+		return [rtl_1ans('00', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g3_e_17(answer) {
+		return [rtl_1ans('64', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b1_g3_e_18(answer) {
+		return [rtl_1ans('84', [5,10], answer), getMax([5,10])] 
+	}
+]
+
+let b1_g3_f = [
+	function b1_g3_f_19(answer) {
+		return [rtl_1ans('44', [5,11], answer), getMax([5,11])] 
+	}, 
+	function b1_g3_f_20(answer) {
+		return [rtl_1ans('112', [2,4,6], answer), getMax([2,4,6])] 
+	}
+]
+
+let b2_g3_c = [
+	function b2_g3_c_1a(answer) {
+		return [ltr_div('11', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g3_c_1b(answer) {
+		return [rtl_1ans('06', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g3_c_2(answer) {
+		return [rtl_fraction('3/8', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b2_g3_c_3a(answer) {
+		return [single_exact_answer('370', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3b(answer) {
+		return [single_exact_answer('400', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3c(answer) {
+		return [single_exact_answer('940', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3d(answer) {
+		return [single_exact_answer('900', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3e(answer) {
+		return [single_exact_answer('760', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3f(answer) {
+		return [single_exact_answer('800', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3g(answer) {
+		return [single_exact_answer('830', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_3h(answer) {
+		return [single_exact_answer('800', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_c_4(answer) {
+		return [rtl_1ans('21', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b2_g3_c_5a(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b2_g3_c_5b(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}
+]
+
+let b2_g3_d = [
+	function b2_g3_d_6(answer) {
+		return [rtl_1ans('14', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b2_g3_d_7(answer) {
+		return [rtl_1ans('48', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b2_g3_d_8a(answer) {
+		return [rtl_fraction('4/1', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b2_g3_d_8b(answer) {
+		return [rtl_fraction('8/1', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b2_g3_d_9(answer) {
+		return [rtl_1ans('6', [4], answer), getMax([4])] 
+	}, 
+	function b2_g3_d_10(answer) {
+		return [rtl_1ans('3', [4], answer), getMax([4])] 
+	}, 
+	function b2_g3_d_11(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_d_12(answer) {
+		return [rtl_1ans('56', [2,5], answer), getMax([2,5])] 
+	}
+]
+
+let b2_g3_e = [
+	function b2_g3_e_13(answer) {
+		return [rtl_1ans('52', [4,8], answer), getMax([4,8])] 
+	}, 
+	function b2_g3_e_14(answer) {
+		return [single_exact_answer('10', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_e_15(answer) {
+		return [rtl_1ans('40', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b2_g3_e_16a(answer) {
+		return [rtl_1ans('4', [1], answer), getMax([1])] 
+	}, 
+	function b2_g3_e_16b(answer) {
+		return [ltr_div('30', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g3_e_17(answer) {
+		return [rtl_1ans('30', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b2_g3_e_18(answer) {
+		return [rtl_1ans('72', [4,8], answer), getMax([4,8])] 
+	}
+]
+
+let b2_g3_f = [
+	function b2_g3_f_19(answer) {
+		return [rtl_1ans('36', [5,11], answer), getMax([5,11])] 
+	}, 
+	function b2_g3_f_20(answer) {
+		return [rtl_1ans('117', [2,4,6], answer), getMax([2,4,6])] 
+	}
+]
+
+let b3_g3_c = [
+	function b3_g3_c_1a(answer) {
+		return [ltr_div('4', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_1b(answer) {
+		return [ltr_div('57', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g3_c_2(answer) {
+		return [rtl_fraction('2/8', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b3_g3_c_3a(answer) {
+		return [single_exact_answer('500', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3b(answer) {
+		return [single_exact_answer('500', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3c(answer) {
+		return [single_exact_answer('260', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3d(answer) {
+		return [single_exact_answer('300', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3e(answer) {
+		return [single_exact_answer('770', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3f(answer) {
+		return [single_exact_answer('800', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3g(answer) {
+		return [single_exact_answer('630', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_3h(answer) {
+		return [single_exact_answer('600', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_c_4(answer) {
+		return [rtl_1ans('12', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b3_g3_c_5a(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b3_g3_c_5b(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}
+]
+
+let b3_g3_d = [
+	function b3_g3_d_6(answer) {
+		return [rtl_1ans('8', [3], answer), getMax([3])] 
+	}, 
+	function b3_g3_d_7(answer) {
+		return [rtl_1ans('28', [2,4], answer), getMax([2,4])] 
+	}, 
+	function b3_g3_d_8a(answer) {
+		return [rtl_fraction('6/1', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b3_g3_d_8b(answer) {
+		return [rtl_fraction('3/1', [1,2], answer, false), getMax([1,2])] 
+	}, 
+	function b3_g3_d_9(answer) {
+		return [rtl_1ans('5', [4], answer), getMax([4])] 
+	}, 
+	function b3_g3_d_10(answer) {
+		return [rtl_1ans('7', [4], answer), getMax([4])] 
+	}, 
+	function b3_g3_d_11(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_d_12(answer) {
+		return [rtl_1ans('68', [2,5], answer), getMax([2,5])] 
+	}
+]
+
+let b3_g3_e = [
+	function b3_g3_e_13(answer) {
+		return [rtl_1ans('6', [11], answer), getMax([11])] 
+	}, 
+	function b3_g3_e_14(answer) {
+		return [single_exact_answer('12', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_e_15(answer) {
+		return [rtl_1ans('84', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b3_g3_e_16a(answer) {
+		return [rtl_1ans('5', [1], answer), getMax([1])] 
+	}, 
+	function b3_g3_e_16b(answer) {
+		return [ltr_div('15', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g3_e_17(answer) {
+		return [rtl_1ans('72', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b3_g3_e_18(answer) {
+		return [rtl_1ans('76', [5,10], answer), getMax([5,10])] 
+	}
+]
+
+let b3_g3_f = [
+	function b3_g3_f_19(answer) {
+		return [rtl_1ans('63', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b3_g3_f_20(answer) {
+		return [rtl_1ans('128', [2,4,6], answer), getMax([2,4,6])] 
+	}
+]
+
+let b1_g4_c = [
+	function b1_g4_c_1a(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_c_1b(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_c_1c(answer) {
+		return [multiple_exact_answers('(no,n)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_c_2a(answer) {
+		return [single_exact_answer('>', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_c_2b(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_c_2c(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_c_3a(answer) {
+		return [solves_equation('X%4=0',[2], answer), getMax([2])] 
+	}, 
+	function b1_g4_c_3b(answer) {
+		return [solves_equation('X%4=0',[2], answer), getMax([2])] 
+	}, 
+	function b1_g4_c_3c(answer) {
+		return [solves_equation('X%4=0',[2], answer), getMax([2])] 
+	}, 
+	function b1_g4_c_4(answer) {
+		return [rtl_1ans('22', [6,12], answer), getMax([6,12])] 
+	}, 
+	function b1_g4_c_5a(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_c_5b(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_c_5c(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_c_6(answer) {
+		return [rtl_1ans('135', [4,9,14], answer), getMax([4,9,14])] 
+	}
+]
+
+let b1_g4_d = [
+	function b1_g4_d_7a(answer) {
+		return [single_exact_answer('c', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_7b(answer) {
+		return [multiple_exact_answers('(a,d)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_7c(answer) {
+		return [multiple_exact_answers('(b,e,f)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_8a(answer) {
+		return [single_exact_answer('2500', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_8b(answer) {
+		return [single_exact_answer('2460', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_8c(answer) {
+		return [single_exact_answer('2000', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_8d(answer) {
+		return [single_exact_answer('4700', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_8e(answer) {
+		return [single_exact_answer('4670', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_8f(answer) {
+		return [single_exact_answer('5000', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_9(answer) {
+		return [rtl_1ans('4', [4], answer), getMax([4])] 
+	}, 
+	function b1_g4_d_10a(answer) {
+		return [single_exact_answer('<', [3], answer), getMax([3])] 
+	}, 
+	function b1_g4_d_10b(answer) {
+		return [single_exact_answer('=', [3], answer), getMax([3])] 
+	}, 
+	function b1_g4_d_11a(answer) {
+		return [single_exact_answer('120', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_d_11b(answer) {
+		return [single_exact_answer('420', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_d_11c(answer) {
+		return [single_exact_answer('240', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_d_12(answer) {
+		return [multiple_exact_answers('(yes,y)', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_d_13a(answer) {
+		return [single_exact_answer('60000', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_13b(answer) {
+		return [single_exact_answer('8000', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_13c(answer) {
+		return [single_exact_answer('400', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_13d(answer) {
+		return [single_exact_answer('70', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_d_13e(answer) {
+		return [single_exact_answer('2', [1], answer), getMax([1])] 
+	}
+]
+
+let b1_g4_e = [
+	function b1_g4_e_14(answer) {
+		return [rtl_1ans('215', [5,10,16], answer), getMax([5,10,16])] 
+	}, 
+	function b1_g4_e_15a(answer) {
+		return [multiple_exact_answers('(0.9, .9)', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_e_15b(answer) {
+		return [multiple_exact_answers('(0.79, .79)', [2], answer), getMax([2])] 
+	}, 
+	function b1_g4_e_16(answer) {
+		return [rtl_1ans('2.88', [3,6,9,12], answer), getMax([3,6,9,12])] 
+	}, 
+	function b1_g4_e_17a(answer) {
+		return [multiple_exact_answers('(37,83)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_e_17b(answer) {
+		return [multiple_exact_answers('(37,83)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_e_17c(answer) {
+		return [multiple_exact_answers('(90,88)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_e_17d(answer) {
+		return [multiple_exact_answers('(90,88)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g4_e_18(answer) {
+		return [rtl_1ans('2', [5], answer), getMax([5])] 
+	}, 
+	function b1_g4_e_19(answer) {
+		return [rtl_fraction('2 1/4', [3,6,9], answer, false), getMax([3,6,9])] 
+	}, 
+	function b1_g4_e_20(answer) {
+		return [rtl_1ans('9', [4], answer), getMax([4])] 
+	}
+]
+
+let b2_g4_c = [
+	function b2_g4_c_1a(answer) {
+		return [multiple_exact_answers('(no,n)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_c_1b(answer) {
+		return [multiple_exact_answers('(no,n)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_c_1c(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_c_2a(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_c_2b(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_c_2c(answer) {
+		return [single_exact_answer('>', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_c_3a(answer) {
+		return [solves_equation('X%3=0',[2], answer), getMax([2])] 
+	}, 
+	function b2_g4_c_3b(answer) {
+		return [solves_equation('X%3=0',[2], answer), getMax([2])] 
+	}, 
+	function b2_g4_c_3c(answer) {
+		return [solves_equation('X%3=0',[2], answer), getMax([2])] 
+	}, 
+	function b2_g4_c_4(answer) {
+		return [rtl_1ans('33', [6,12], answer), getMax([6,12])] 
+	}, 
+	function b2_g4_c_5a(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_c_5b(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_c_5c(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_c_6(answer) {
+		return [rtl_1ans('192', [4,9,14], answer), getMax([4,9,14])] 
+	}
+]
+
+let b2_g4_d = [
+	function b2_g4_d_7a(answer) {
+		return [single_exact_answer('e', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_7b(answer) {
+		return [multiple_exact_answers('(a,b,d)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_7c(answer) {
+		return [multiple_exact_answers('(c,f)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_8a(answer) {
+		return [single_exact_answer('8300', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_8b(answer) {
+		return [single_exact_answer('8260', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_8c(answer) {
+		return [single_exact_answer('8000', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_8d(answer) {
+		return [single_exact_answer('6400', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_8e(answer) {
+		return [single_exact_answer('6440', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_8f(answer) {
+		return [single_exact_answer('6000', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_9(answer) {
+		return [rtl_1ans('3', [4], answer), getMax([4])] 
+	}, 
+	function b2_g4_d_10a(answer) {
+		return [single_exact_answer('<', [3], answer), getMax([3])] 
+	}, 
+	function b2_g4_d_10b(answer) {
+		return [single_exact_answer('<', [3], answer), getMax([3])] 
+	}, 
+	function b2_g4_d_11a(answer) {
+		return [single_exact_answer('48', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_d_11b(answer) {
+		return [single_exact_answer('64', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_d_11c(answer) {
+		return [single_exact_answer('80', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_d_12(answer) {
+		return [multiple_exact_answers('(yes,y)', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_d_13a(answer) {
+		return [single_exact_answer('40000', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_13b(answer) {
+		return [single_exact_answer('3000', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_13c(answer) {
+		return [single_exact_answer('700', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_13d(answer) {
+		return [single_exact_answer('90', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_d_13e(answer) {
+		return [single_exact_answer('7', [1], answer), getMax([1])] 
+	}
+]
+
+let b2_g4_e = [
+	function b2_g4_e_14(answer) {
+		return [rtl_1ans('198', [5,10,16], answer), getMax([5,10,16])] 
+	}, 
+	function b2_g4_e_15a(answer) {
+		return [multiple_exact_answers('(.1,0.1)', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_e_15b(answer) {
+		return [multiple_exact_answers('(.35,0.35)', [2], answer), getMax([2])] 
+	}, 
+	function b2_g4_e_16(answer) {
+		return [rtl_1ans('2.16', [4,6,8,12], answer), getMax([4,6,8,12])] 
+	}, 
+	function b2_g4_e_17a(answer) {
+		return [multiple_exact_answers('(41,67)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_e_17b(answer) {
+		return [multiple_exact_answers('(41,67)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_e_17c(answer) {
+		return [multiple_exact_answers('(24,25)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_e_17d(answer) {
+		return [multiple_exact_answers('(24,25)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g4_e_18(answer) {
+		return [rtl_1ans('4', [6], answer), getMax([6])] 
+	}, 
+	function b2_g4_e_19(answer) {
+		return [rtl_fraction('2 1/4', [3,6,9], answer, false), getMax([3,6,9])] 
+	}, 
+	function b2_g4_e_20(answer) {
+		return [rtl_1ans('7', [4], answer), getMax([4])] 
+	}
+]
+
+let b3_g4_c = [
+	function b3_g4_c_1a(answer) {
+		return [multiple_exact_answers('(no,n)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_c_1b(answer) {
+		return [multiple_exact_answers('(no,n)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_c_1c(answer) {
+		return [multiple_exact_answers('(yes,y)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_c_2a(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_c_2b(answer) {
+		return [single_exact_answer('<', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_c_2c(answer) {
+		return [single_exact_answer('>', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_c_3a(answer) {
+		return [solves_equation('X%8=0',[2], answer), getMax([2])] 
+	}, 
+	function b3_g4_c_3b(answer) {
+		return [solves_equation('X%8=0',[2], answer), getMax([2])] 
+	}, 
+	function b3_g4_c_3c(answer) {
+		return [solves_equation('X%8=0',[2], answer), getMax([2])] 
+	}, 
+	function b3_g4_c_4(answer) {
+		return [rtl_1ans('23', [6,12], answer), getMax([6,12])] 
+	}, 
+	function b3_g4_c_5a(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_c_5b(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_c_5c(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_c_6(answer) {
+		return [rtl_1ans('123', [4,8,13], answer), getMax([4,8,13])] 
+	}
+]
+
+let b3_g4_d = [
+	function b3_g4_d_7a(answer) {
+		return [single_exact_answer('f', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_7b(answer) {
+		return [multiple_exact_answers('(a,b)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_7c(answer) {
+		return [multiple_exact_answers('(c,d,e)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_8a(answer) {
+		return [single_exact_answer('8200', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_8b(answer) {
+		return [single_exact_answer('8180', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_8c(answer) {
+		return [single_exact_answer('8000', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_8d(answer) {
+		return [single_exact_answer('7300', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_8e(answer) {
+		return [single_exact_answer('7290', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_8f(answer) {
+		return [single_exact_answer('7000', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_9(answer) {
+		return [rtl_1ans('8', [4], answer), getMax([4])] 
+	}, 
+	function b3_g4_d_10a(answer) {
+		return [single_exact_answer('<', [3], answer), getMax([3])] 
+	}, 
+	function b3_g4_d_10b(answer) {
+		return [single_exact_answer('<', [3], answer), getMax([3])] 
+	}, 
+	function b3_g4_d_11a(answer) {
+		return [single_exact_answer('8000', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_d_11b(answer) {
+		return [single_exact_answer('3000', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_d_11c(answer) {
+		return [single_exact_answer('6000', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_d_12(answer) {
+		return [multiple_exact_answers('(yes,y)', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_d_13a(answer) {
+		return [single_exact_answer('20000', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_13b(answer) {
+		return [single_exact_answer('9000', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_13c(answer) {
+		return [single_exact_answer('500', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_13d(answer) {
+		return [single_exact_answer('60', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_d_13e(answer) {
+		return [single_exact_answer('6', [1], answer), getMax([1])] 
+	}
+]
+
+let b3_g4_e = [
+	function b3_g4_e_14(answer) {
+		return [rtl_1ans('178', [5,10,16], answer), getMax([5,10,16])] 
+	}, 
+	function b3_g4_e_15a(answer) {
+		return [multiple_exact_answers('(.6,0.6)', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_e_15b(answer) {
+		return [multiple_exact_answers('(.61,0.61)', [2], answer), getMax([2])] 
+	}, 
+	function b3_g4_e_16(answer) {
+		return [rtl_1ans('7.85', [4,6,8,12], answer), getMax([4,6,8,12])] 
+	}, 
+	function b3_g4_e_17a(answer) {
+		return [multiple_exact_answers('(37,47)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_e_17b(answer) {
+		return [multiple_exact_answers('(37,47)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_e_17c(answer) {
+		return [multiple_exact_answers('(48,60)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_e_17d(answer) {
+		return [multiple_exact_answers('(48,60)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g4_e_18(answer) {
+		return [rtl_1ans('2', [5], answer), getMax([5])] 
+	}, 
+	function b3_g4_e_19(answer) {
+		return [rtl_fraction('3 1/4', [3,6,9], answer, false), getMax([3,6,9])] 
+	}, 
+	function b3_g4_e_20(answer) {
+		return [rtl_1ans('8', [4], answer), getMax([4])] 
+	}
+]
+
+let b1_g5_c = [
+	function b1_g5_c_1a(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b1_g5_c_1b(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b1_g5_c_1c(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b1_g5_c_2(answer) {
+		return [num_correct('4', [1,2,3,4], answer), getMax([1,2,3,4])] 
+	}, 
+	function b1_g5_c_3(answer) {
+		return [rtl_1ans('12', [5,10], answer), getMax([5,10])] 
+	}, 
+	function b1_g5_c_4(answer) {
+		return [rtl_1ans('6', [9], answer), getMax([9])] 
+	}, 
+	function b1_g5_c_5(answer) {
+		return [rtl_fraction('19/24', [2,4,6,8], answer, false), getMax([2,4,6,8])] 
+	}, 
+	function b1_g5_c_6a(answer) {
+		return [single_exact_answer('7.5', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_c_6b(answer) {
+		return [single_exact_answer('7.48', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_c_6c(answer) {
+		return [single_exact_answer('7.478', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_c_6d(answer) {
+		return [single_exact_answer('6.4', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_c_6e(answer) {
+		return [single_exact_answer('6.44', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_c_6f(answer) {
+		return [single_exact_answer('6.436', [1], answer), getMax([1])] 
+	}
+]
+
+let b1_g5_d = [
+	function b1_g5_d_7a(answer) {
+		return [single_exact_answer('6', [2], answer), getMax([2])] 
+	}, 
+	function b1_g5_d_7b(answer) {
+		return [single_exact_answer('4', [2], answer), getMax([2])] 
+	}, 
+	function b1_g5_d_8a(answer) {
+		return [single_exact_answer('15', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8b(answer) {
+		return [single_exact_answer('25', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8c(answer) {
+		return [single_exact_answer('18', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8d(answer) {
+		return [single_exact_answer('30', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8e(answer) {
+		return [single_exact_answer('21', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8f(answer) {
+		return [single_exact_answer('35', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8g(answer) {
+		return [single_exact_answer('24', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8h(answer) {
+		return [single_exact_answer('40', [1], answer), getMax([1])] 
+	}, 
+	function b1_g5_d_8i(answer) {
+		return [num_correct('2', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b1_g5_d_9(answer) {
+		return [rtl_1ans('80', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b1_g5_d_10(answer) {
+		return [rtl_fraction('1/24', [1,3,5], answer, false), getMax([1,3,5])] 
+	}
+]
+
+let b1_g5_e = [
+	function b1_g5_e_11(answer) {
+		return [rtl_1ans('1.92', [4,9,14,19], answer), getMax([4,9,14,19])] 
+	}, 
+	function b1_g5_e_12(answer) {
+		return [multiple_exact_answers('(yes,y)', [2], answer), getMax([2])] 
+	}, 
+	function b1_g5_e_13(answer) {
+		return [rtl_1ans('60', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b1_g5_e_14(answer) {
+		return [ltr_div('3.6', [1,3,7], answer), getMax([1,3,7])] 
+	}, 
+	function b1_g5_e_15(answer) {
+		return [multiple_exact_answers('(yes,y)', [3], answer), getMax([3])] 
+	}, 
+	function b1_g5_e_16(answer) {
+		return [rtl_fraction('1/16', [2,4,6], answer, false), getMax([2,4,6])] 
+	}
+]
+
+let b2_g5_c = [
+	function b2_g5_c_1a(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b2_g5_c_1b(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b2_g5_c_1c(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b2_g5_c_2(answer) {
+		return [num_correct('4', [1,2,3,4], answer), getMax([1,2,3,4])] 
+	}, 
+	function b2_g5_c_3(answer) {
+		return [rtl_1ans('29', [6,12], answer), getMax([6,12])] 
+	}, 
+	function b2_g5_c_4(answer) {
+		return [rtl_1ans('5', [13], answer), getMax([13])] 
+	}, 
+	function b2_g5_c_5(answer) {
+		return [rtl_fraction('5/6', [3,6], answer, false), getMax([3,6])] 
+	}, 
+	function b2_g5_c_6a(answer) {
+		return [single_exact_answer('3.2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_c_6b(answer) {
+		return [single_exact_answer('3.18', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_c_6c(answer) {
+		return [single_exact_answer('3.183', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_c_6d(answer) {
+		return [single_exact_answer('9.2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_c_6e(answer) {
+		return [single_exact_answer('9.16', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_c_6f(answer) {
+		return [single_exact_answer('9.162', [1], answer), getMax([1])] 
+	}
+]
+
+let b2_g5_d = [
+	function b2_g5_d_7a(answer) {
+		return [single_exact_answer('6', [2], answer), getMax([2])] 
+	}, 
+	function b2_g5_d_7b(answer) {
+		return [single_exact_answer('3', [2], answer), getMax([2])] 
+	}, 
+	function b2_g5_d_8a(answer) {
+		return [single_exact_answer('10', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8b(answer) {
+		return [single_exact_answer('20', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8c(answer) {
+		return [single_exact_answer('12', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8d(answer) {
+		return [single_exact_answer('24', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8e(answer) {
+		return [single_exact_answer('14', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8f(answer) {
+		return [single_exact_answer('28', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8g(answer) {
+		return [single_exact_answer('16', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8h(answer) {
+		return [single_exact_answer('32', [1], answer), getMax([1])] 
+	}, 
+	function b2_g5_d_8i(answer) {
+		return [num_correct('2', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b2_g5_d_9(answer) {
+		return [rtl_1ans('40', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b2_g5_d_10(answer) {
+		return [rtl_fraction('2/15', [1,3,5], answer, false), getMax([1,3,5])] 
+	}
+]
+
+let b2_g5_e = [
+	function b2_g5_e_11(answer) {
+		return [rtl_1ans('3.28', [5,10,15,20], answer), getMax([5,10,15,20])] 
+	}, 
+	function b2_g5_e_12(answer) {
+		return [multiple_exact_answers('(yes,y)', [2], answer), getMax([2])] 
+	}, 
+	function b2_g5_e_13(answer) {
+		return [rtl_1ans('80', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b2_g5_e_14(answer) {
+		return [ltr_div('2.8', [1,3,7], answer), getMax([1,3,7])] 
+	}, 
+	function b2_g5_e_15(answer) {
+		return [multiple_exact_answers('(yes,y)', [3], answer), getMax([3])] 
+	}, 
+	function b2_g5_e_16(answer) {
+		return [rtl_fraction('3/32', [2,4,6], answer, false), getMax([2,4,6])] 
+	}
+]
+
+let b3_g5_c = [
+	function b3_g5_c_1a(answer) {
+		return [single_exact_answer('<', [2], answer), getMax([2])] 
+	}, 
+	function b3_g5_c_1b(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b3_g5_c_1c(answer) {
+		return [single_exact_answer('>', [2], answer), getMax([2])] 
+	}, 
+	function b3_g5_c_2(answer) {
+		return [num_correct('4', [1,2,3,4], answer), getMax([1,2,3,4])] 
+	}, 
+	function b3_g5_c_3(answer) {
+		return [rtl_1ans('18', [6,12], answer), getMax([6,12])] 
+	}, 
+	function b3_g5_c_4(answer) {
+		return [rtl_1ans('4', [13], answer), getMax([13])] 
+	}, 
+	function b3_g5_c_5(answer) {
+		return [rtl_fraction('13/15', [2,4,6,8], answer, false), getMax([2,4,6,8])] 
+	}, 
+	function b3_g5_c_6a(answer) {
+		return [single_exact_answer('4.2', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_c_6b(answer) {
+		return [single_exact_answer('4.22', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_c_6c(answer) {
+		return [single_exact_answer('4.222', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_c_6d(answer) {
+		return [single_exact_answer('4.4', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_c_6e(answer) {
+		return [single_exact_answer('4.38', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_c_6f(answer) {
+		return [single_exact_answer('4.379', [1], answer), getMax([1])] 
+	}
+]
+
+let b3_g5_d = [
+	function b3_g5_d_7a(answer) {
+		return [single_exact_answer('5', [2], answer), getMax([2])] 
+	}, 
+	function b3_g5_d_7b(answer) {
+		return [single_exact_answer('4', [2], answer), getMax([2])] 
+	}, 
+	function b3_g5_d_8a(answer) {
+		return [single_exact_answer('15', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8b(answer) {
+		return [single_exact_answer('20', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8c(answer) {
+		return [single_exact_answer('18', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8d(answer) {
+		return [single_exact_answer('24', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8e(answer) {
+		return [single_exact_answer('21', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8f(answer) {
+		return [single_exact_answer('28', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8g(answer) {
+		return [single_exact_answer('24', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8h(answer) {
+		return [single_exact_answer('32', [1], answer), getMax([1])] 
+	}, 
+	function b3_g5_d_8i(answer) {
+		return [num_correct('2', [1,2], answer), getMax([1,2])] 
+	}, 
+	function b3_g5_d_9(answer) {
+		return [rtl_1ans('16', [3,7], answer), getMax([3,7])] 
+	}, 
+	function b3_g5_d_10(answer) {
+		return [rtl_fraction('1/24', [1,3,5], answer, false), getMax([1,3,5])] 
+	}
+]
+
+let b3_g5_e = [
+	function b3_g5_e_11(answer) {
+		return [ltr_div('3.60', [5,10,15,20], answer), getMax([5,10,15,20])] 
+	}, 
+	function b3_g5_e_12(answer) {
+		return [multiple_exact_answers('(yes,y)', [2], answer), getMax([2])] 
+	}, 
+	function b3_g5_e_13(answer) {
+		return [rtl_1ans('126', [3,7,10], answer), getMax([3,7,10])] 
+	}, 
+	function b3_g5_e_14(answer) {
+		return [ltr_div('5.6', [1,3,7], answer), getMax([1,3,7])] 
+	}, 
+	function b3_g5_e_15(answer) {
+		return [multiple_exact_answers('(yes,y)', [3], answer), getMax([3])] 
+	}, 
+	function b3_g5_e_16(answer) {
+		return [rtl_fraction('1/28', [2,4,6], answer, false), getMax([2,4,6])] 
+	}
+]
+
+let b1_g6_c = [
+	function b1_g6_c_1(answer) {
+		return [ratio_exact('24:61', [2], answer), getMax([2])] 
+	}, 
+	function b1_g6_c_2a(answer) {
+		return [rtl_1ans('6', [11], answer), getMax([11])] 
+	}, 
+	function b1_g6_c_2b(answer) {
+		return [single_exact_answer('5', [5], answer), getMax([5])] 
+	}, 
+	function b1_g6_c_3a(answer) {
+		return [single_exact_answer('2', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_c_3b(answer) {
+		return [single_exact_answer('3', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_c_3c(answer) {
+		return [single_exact_answer('1', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_c_4(answer) {
+		return [num_correct('2', [3,6], answer), getMax([3,6])] 
+	}, 
+	function b1_g6_c_5a(answer) {
+		return [rtl_1ans('72', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b1_g6_c_5b(answer) {
+		return [rtl_1ans('576', [7,14,21], answer), getMax([7,14,21])] 
+	}, 
+	function b1_g6_c_6(answer) {
+		return [rtl_1ans('3', [6], answer), getMax([6])] 
+	}
+]
+
+let b1_g6_d = [
+	function b1_g6_d_7(answer) {
+		return [num_correct('3', [1,2,3], answer), getMax([1,2,3])] 
+	}, 
+	function b1_g6_d_8a(answer) {
+		return [multiple_exact_answers('(true,t)', [3], answer), getMax([3])] 
+	}, 
+	function b1_g6_d_8b(answer) {
+		return [multiple_exact_answers('(false, f)', [3], answer), getMax([3])] 
+	}, 
+	function b1_g6_d_9a(answer) {
+		return [single_exact_answer('6', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_d_9b(answer) {
+		return [single_exact_answer('30', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_d_9c(answer) {
+		return [single_exact_answer('60', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_d_9d(answer) {
+		return [single_exact_answer('15', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_d_10a(answer) {
+		return [single_exact_answer('-8', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_d_10b(answer) {
+		return [single_exact_answer('2', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_d_10c(answer) {
+		return [num_correct('4', [1,2,3,4], answer), getMax([1,2,3,4])] 
+	}
+]
+
+let b1_g6_e = [
+	function b1_g6_e_11a(answer) {
+		return [multiple_exact_answers('($10,10)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_e_11b(answer) {
+		return [multiple_exact_answers('($15,15)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_e_11c(answer) {
+		return [multiple_exact_answers('($25,25)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_e_11d(answer) {
+		return [multiple_exact_answers('(yes, y)', [4], answer), getMax([4])] 
+	}, 
+	function b1_g6_e_11e(answer) {
+		return [num_correct('3', [1,2,3], answer), getMax([1,2,3])] 
+	}, 
+	function b1_g6_e_12(answer) {
+		return [rtl_1ans('7', [4], answer), getMax([4])] 
+	}, 
+	function b1_g6_e_13a(answer) {
+		return [single_exact_answer('75', [2], answer), getMax([2])] 
+	}, 
+	function b1_g6_e_13b(answer) {
+		return [single_exact_answer('46', [2], answer), getMax([2])] 
+	}, 
+	function b1_g6_e_13c(answer) {
+		return [single_exact_answer('88', [2], answer), getMax([2])] 
+	}, 
+	function b1_g6_e_14a(answer) {
+		return [multiple_exact_answers('(diver b, b)', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_e_14b(answer) {
+		return [single_exact_answer('28', [1], answer), getMax([1])] 
+	}, 
+	function b1_g6_e_15(answer) {
+		return [rtl_1ans('64', [4,9], answer), getMax([4,9])] 
+	}
+]
+
+let b1_g6_f = [
+	function b1_g6_f_16(answer) {
+		return [rtl_1ans('150', [3,7,10], answer), getMax([3,7,10])] 
+	}, 
+	function b1_g6_f_17(answer) {
+		return [rtl_1ans('56', [5,10], answer), getMax([5,10])] 
+	}, 
+	function b1_g6_f_18(answer) {
+		return [single_exact_answer('6', [8], answer), getMax([8])] 
+	}, 
+	function b1_g6_f_19(answer) {
+		return [multiple_exact_answers('(yes,y)', [5], answer), getMax([5])] 
+	}, 
+	function b1_g6_f_20(answer) {
+		return [multiple_exact_answers('(yes,y)', [4], answer), getMax([4])] 
+	}
+]
+
+let b2_g6_c = [
+	function b2_g6_c_1(answer) {
+		return [ratio_exact('17:24', [2], answer), getMax([2])] 
+	}, 
+	function b2_g6_c_2a(answer) {
+		return [rtl_1ans('6', [11], answer), getMax([11])] 
+	}, 
+	function b2_g6_c_2b(answer) {
+		return [single_exact_answer('7', [5], answer), getMax([5])] 
+	}, 
+	function b2_g6_c_3a(answer) {
+		return [single_exact_answer('1', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_c_3b(answer) {
+		return [single_exact_answer('3', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_c_3c(answer) {
+		return [single_exact_answer('2', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_c_4(answer) {
+		return [num_correct('2', [3,6], answer), getMax([3,6])] 
+	}, 
+	function b2_g6_c_5a(answer) {
+		return [rtl_1ans('140', [3,6,10], answer), getMax([3,6,10])] 
+	}, 
+	function b2_g6_c_5b(answer) {
+		return [rtl_1ans('1120', [7,13,19,26], answer), getMax([7,13,19,26])] 
+	}, 
+	function b2_g6_c_6(answer) {
+		return [rtl_1ans('3', [6], answer), getMax([6])] 
+	}
+]
+
+let b2_g6_d = [
+	function b2_g6_d_7(answer) {
+		return [num_correct('3', [1,2,3], answer), getMax([1,2,3])] 
+	}, 
+	function b2_g6_d_8a(answer) {
+		return [multiple_exact_answers('(false, f)', [3], answer), getMax([3])] 
+	}, 
+	function b2_g6_d_8b(answer) {
+		return [multiple_exact_answers('(false, f)', [3], answer), getMax([3])] 
+	}, 
+	function b2_g6_d_9a(answer) {
+		return [single_exact_answer('6', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_d_9b(answer) {
+		return [single_exact_answer('18', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_d_9c(answer) {
+		return [single_exact_answer('36', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_d_9d(answer) {
+		return [single_exact_answer('15', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_d_10a(answer) {
+		return [single_exact_answer('-5', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_d_10b(answer) {
+		return [single_exact_answer('7', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_d_10c(answer) {
+		return [num_correct('4', [1,2,3,4], answer), getMax([1,2,3,4])] 
+	}
+]
+
+let b2_g6_e = [
+	function b2_g6_e_11a(answer) {
+		return [multiple_exact_answers('($50,50)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_e_11b(answer) {
+		return [multiple_exact_answers('($75,75)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_e_11c(answer) {
+		return [multiple_exact_answers('($125,125)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_e_11d(answer) {
+		return [multiple_exact_answers('(yes,y)', [4], answer), getMax([4])] 
+	}, 
+	function b2_g6_e_11e(answer) {
+		return [num_correct('3', [1,2,3], answer), getMax([1,2,3])] 
+	}, 
+	function b2_g6_e_12(answer) {
+		return [rtl_1ans('4', [4], answer), getMax([4])] 
+	}, 
+	function b2_g6_e_13a(answer) {
+		return [single_exact_answer('97', [2], answer), getMax([2])] 
+	}, 
+	function b2_g6_e_13b(answer) {
+		return [single_exact_answer('55', [2], answer), getMax([2])] 
+	}, 
+	function b2_g6_e_13c(answer) {
+		return [single_exact_answer('98', [2], answer), getMax([2])] 
+	}, 
+	function b2_g6_e_14a(answer) {
+		return [multiple_exact_answers('(diver b,b)', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_e_14b(answer) {
+		return [single_exact_answer('20', [1], answer), getMax([1])] 
+	}, 
+	function b2_g6_e_15(answer) {
+		return [rtl_1ans('27', [3,7], answer), getMax([3,7])] 
+	}
+]
+
+let b2_g6_f = [
+	function b2_g6_f_16(answer) {
+		return [rtl_1ans('160', [7,15,23], answer), getMax([7,15,23])] 
+	}, 
+	function b2_g6_f_17(answer) {
+		return [rtl_1ans('72', [4,8], answer), getMax([4,8])] 
+	}, 
+	function b2_g6_f_18(answer) {
+		return [single_exact_answer('6', [8], answer), getMax([8])] 
+	}, 
+	function b2_g6_f_19(answer) {
+		return [multiple_exact_answers('(yes,y)', [5], answer), getMax([5])] 
+	}, 
+	function b2_g6_f_20(answer) {
+		return [multiple_exact_answers('(yes,y)', [4], answer), getMax([4])] 
+	}
+]
+
+let b3_g6_c = [
+	function b3_g6_c_1(answer) {
+		return [ratio_exact('16:18', [2], answer), getMax([2])] 
+	}, 
+	function b3_g6_c_2a(answer) {
+		return [rtl_1ans('6', [11], answer), getMax([11])] 
+	}, 
+	function b3_g6_c_2b(answer) {
+		return [single_exact_answer('7', [5], answer), getMax([5])] 
+	}, 
+	function b3_g6_c_3a(answer) {
+		return [single_exact_answer('3', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_c_3b(answer) {
+		return [single_exact_answer('2', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_c_3c(answer) {
+		return [single_exact_answer('1', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_c_4(answer) {
+		return [num_correct('2', [3,6], answer), getMax([3,6])] 
+	}, 
+	function b3_g6_c_5a(answer) {
+		return [rtl_1ans('60', [4,9], answer), getMax([4,9])] 
+	}, 
+	function b3_g6_c_5b(answer) {
+		return [rtl_1ans('480', [7,14,21], answer), getMax([7,14,21])] 
+	}, 
+	function b3_g6_c_6(answer) {
+		return [rtl_1ans('4', [6], answer), getMax([6])] 
+	}
+]
+
+let b3_g6_d = [
+	function b3_g6_d_7(answer) {
+		return [num_correct('3', [1,2,3], answer), getMax([1,2,3])] 
+	}, 
+	function b3_g6_d_8a(answer) {
+		return [multiple_exact_answers('(false,f)', [3], answer), getMax([3])] 
+	}, 
+	function b3_g6_d_8b(answer) {
+		return [multiple_exact_answers('(true,t)', [3], answer), getMax([3])] 
+	}, 
+	function b3_g6_d_9a(answer) {
+		return [single_exact_answer('8', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_d_9b(answer) {
+		return [single_exact_answer('18', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_d_9c(answer) {
+		return [single_exact_answer('36', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_d_9d(answer) {
+		return [single_exact_answer('20', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_d_10a(answer) {
+		return [single_exact_answer('-3', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_d_10b(answer) {
+		return [single_exact_answer('8', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_d_10c(answer) {
+		return [num_correct('4', [1,2,3,4], answer), getMax([1,2,3,4])] 
+	}
+]
+
+let b3_g6_e = [
+	function b3_g6_e_11a(answer) {
+		return [multiple_exact_answers('($80,80)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_e_11b(answer) {
+		return [multiple_exact_answers('($120,120)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_e_11c(answer) {
+		return [multiple_exact_answers('($200,200)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_e_11d(answer) {
+		return [multiple_exact_answers('(yes,y)', [4], answer), getMax([4])] 
+	}, 
+	function b3_g6_e_11e(answer) {
+		return [num_correct('3', [1,2,3], answer), getMax([1,2,3])] 
+	}, 
+	function b3_g6_e_12(answer) {
+		return [rtl_1ans('8', [4], answer), getMax([4])] 
+	}, 
+	function b3_g6_e_13a(answer) {
+		return [single_exact_answer('94', [2], answer), getMax([2])] 
+	}, 
+	function b3_g6_e_13b(answer) {
+		return [single_exact_answer('66', [2], answer), getMax([2])] 
+	}, 
+	function b3_g6_e_13c(answer) {
+		return [single_exact_answer('98', [2], answer), getMax([2])] 
+	}, 
+	function b3_g6_e_14a(answer) {
+		return [multiple_exact_answers('(diver a,a)', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_e_14b(answer) {
+		return [single_exact_answer('24', [1], answer), getMax([1])] 
+	}, 
+	function b3_g6_e_15(answer) {
+		return [rtl_1ans('16', [2,4], answer), getMax([2,4])] 
+	}
+]
+
+let b3_g6_f = [
+	function b3_g6_f_16(answer) {
+		return [rtl_1ans('40', [10,20], answer), getMax([10,20])] 
+	}, 
+	function b3_g6_f_17(answer) {
+		return [rtl_1ans('54', [4,8], answer), getMax([4,8])] 
+	}, 
+	function b3_g6_f_18(answer) {
+		return [single_exact_answer('2', [9], answer), getMax([9])] 
+	}, 
+	function b3_g6_f_19(answer) {
+		return [multiple_exact_answers('(yes,y)', [5], answer), getMax([5])] 
+	}, 
+	function b3_g6_f_20(answer) {
+		return [multiple_exact_answers('(yes,y)', [4], answer), getMax([4])] 
 	}
 ]

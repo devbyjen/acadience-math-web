@@ -1,0 +1,728 @@
+/* Note: these CAP worksheets are consistently inconsistent. Hardcoded each one separately because I see no predictable patterns here. */
+#b1_g2_c>.grid>.problem,
+#b1_g2_d>.grid>.problem,
+#b1_g2_e>.grid>.problem,
+#b2_g2_c>.grid>.problem,
+#b2_g2_d>.grid>.problem,
+#b2_g2_e>.grid>.problem,
+#b3_g2_c>.grid>.problem,
+#b3_g2_d>.grid>.problem,
+#b3_g2_e>.grid>.problem
+{
+    position: absolute;
+    padding: 0;
+}
+
+#b1_g2_c>.grid>.problem>input,
+#b1_g2_d>.grid>.problem>input,
+#b1_g2_e>.grid>.problem>input,
+#b2_g2_c>.grid>.problem>input,
+#b2_g2_d>.grid>.problem>input,
+#b2_g2_e>.grid>.problem>input,
+#b3_g2_c>.grid>.problem>input,
+#b3_g2_d>.grid>.problem>input,
+#b3_g2_e>.grid>.problem>input
+{
+    width: 100%;
+    margin: 0;
+}
+#b1_g2_c>.grid>.problem>.solution,
+#b1_g2_d>.grid>.problem>.solution,
+#b1_g2_e>.grid>.problem>.solution,
+#b2_g2_c>.grid>.problem>.solution,
+#b2_g2_d>.grid>.problem>.solution,
+#b2_g2_e>.grid>.problem>.solution,
+#b3_g2_c>.grid>.problem>.solution,
+#b3_g2_d>.grid>.problem>.solution,
+#b3_g2_e>.grid>.problem>.solution
+{
+    display:inline;
+    align-items: start;
+    z-index:100;
+}
+/************************/
+/*      Benchmark 1     */
+/************************/
+/* Page 1 (aka Form 'C') */
+#b1_g2_c>.grid>.problem:nth-child(1)
+{
+    top: 75px;
+    left: 100px;
+    width: 10px;
+    height: 10px;
+}
+
+#b1_g2_c>.grid>.problem:nth-child(2)
+{
+    top: 75px;
+    left: 180px;
+    width: 10px;
+    height: 10px;
+}
+
+#b1_g2_c>.grid>.problem:nth-child(3)
+{
+    top: 75px;
+    left: 260px;
+    width: 10px;
+    height: 10px;
+}
+
+#b1_g2_c>.grid>.problem:nth-child(4)
+{
+    top: 75px;
+    left: 340px;
+    width: 10px;
+    height: 10px;
+}
+
+#b1_g2_c>.grid>.problem:nth-child(5)
+{
+    top: 75px;
+    left: 420px;
+    width: 20px;
+    height: 10px;
+}
+#b1_g2_c>.grid>.problem:nth-child(6)
+{
+    top: 190px;
+    left: 440px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g2_c>.grid>.problem:nth-child(7)
+{
+    top: 440px;
+    left: 150px;
+    width: 10px;
+    height: 5px;
+}
+#b1_g2_c>.grid>.problem:nth-child(8)
+{
+    top: 475px;
+    left: 150px;
+    width: 10px;
+    height: 5px;
+}
+#b1_g2_c>.grid>.problem:nth-child(9)
+{
+    top: 495px;
+    left: 150px;
+    width: 10px;
+    height: 5px;
+}
+#b1_g2_c>.grid>.problem:nth-child(10)
+{
+    top: 550px;
+    left: 360px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g2_c>.grid>.problem:nth-child(11)
+{
+    top: 750px;
+    left: 50px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g2_c>.grid>.problem:nth-child(12)
+{
+    top: 900px;
+    left: 700px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g2_c>.grid>.problem:nth-child(12)::before
+{
+    content: "Enter the number of hands that were correctly drawn:";
+    width: 150px;
+    display:block;
+    color: red;
+    padding-bottom: 5px;
+}
+
+/* Page 2 (aka Form 'D') */
+
+#b1_g2_d>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 0px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g2_d>.grid>.problem:nth-child(2)
+{
+    top: 70px;
+    left: 430px;
+    width: 50px;
+    height: 10px;
+}
+
+#b1_g2_d>.grid>.problem:nth-child(3)
+{
+    top: 350px;
+    left: 790px;
+    width: 50px;
+    height: 10px;
+}
+#b1_g2_d>.grid>.problem:nth-child(3)::before
+{
+    content: "Is the answer correct? Y/N";
+    width: 100px;
+    display:block;
+    color: red;
+    padding-bottom: 5px;
+}
+
+#b1_g2_d>.grid>.problem:nth-child(4)
+{
+    top: 480px;
+    left: 260px;
+    position: absolute;
+    width: 40px;
+    height: 10px;
+}
+
+#b1_g2_d>.grid>.problem:nth-child(5)
+{
+    top: 660px;
+    left: 560px;
+    width: 50px;
+    height: 10px;
+}
+
+#b1_g2_d>.grid>.problem:nth-child(6)
+{
+    top: 1040px;
+    left: 165px;
+    width: 8px;
+    height: 10px;
+}
+
+
+/* Page 3 (aka form "e") */
+
+#b1_g2_e>.grid>.problem:nth-child(1)
+{
+    top: 15px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b1_g2_e>.grid>.problem:nth-child(2)
+{
+    top: 15px;
+    left: 340px;
+    width: 20px;
+    height: 5px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(3)
+{
+    top: 40px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(4)
+{
+    top: 40px;
+    left: 340px;
+    width: 20px;
+    height: 5px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(5)
+{
+    top: 65px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(6)
+{
+    top: 65px;
+    left: 340px;
+    width: 20px;
+    height: 5px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(7)
+{
+    top: 260px;
+    left: 240px;
+    width: 8px;
+    height: 10px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(8)
+{
+    top: 260px;
+    left: 290px;
+    width: 20px;
+    height: 10px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(9)
+{
+    top: 440px;
+    left: 190px;
+    width: 50px;
+    height: 10px;
+}
+
+#b1_g2_e>.grid>.problem:nth-child(10)
+{
+    top: 560px;
+    left: 730px;
+    width: 50px;
+    height: 10px;
+}
+
+/*****************/
+/*  Benchmark 2  */
+/*****************/
+
+/* Form c */
+
+
+#b2_g2_c>.grid>.problem:nth-child(1)
+{
+    top: 50px;
+    left: 270px;
+    width: 10px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(2)
+{
+    top: 50px;
+    left: 350px;
+    width: 10px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(3)
+{
+    top: 50px;
+    left: 420px;
+    width: 20px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(4)
+{
+    top: 200px;
+    left: 70px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(5)
+{
+    top: 415px;
+    left: 160px;
+    width: 10px;
+    height: 5px;
+}
+#b2_g2_c>.grid>.problem:nth-child(6)
+{
+    top: 445px;
+    left: 160px;
+    width: 10px;
+    height: 5px;
+}
+#b2_g2_c>.grid>.problem:nth-child(7)
+{
+    top: 470px;
+    left: 160px;
+    width: 10px;
+    height: 5px;
+}
+#b2_g2_c>.grid>.problem:nth-child(8)
+{
+    top: 520px;
+    left: 370px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(9)
+{
+    top: 720px;
+    left: 220px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(10)
+{
+    top: 850px;
+    left: 750px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g2_c>.grid>.problem:nth-child(10)::before
+{
+    content: "Enter the number of hands that were correctly drawn:";
+    width: 150px;
+    display:block;
+    color: red;
+    padding-bottom: 5px;
+}
+
+/* Page 2 (aka form "d") */
+
+#b2_g2_d>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 20px;
+    width: 50px;
+    height: 10px;
+}
+
+#b2_g2_d>.grid>.problem:nth-child(2)
+{
+    top: 70px;
+    left: 420px;
+    width: 50px;
+    height: 10px;
+}
+
+#b2_g2_d>.grid>.problem:nth-child(3)
+{
+    top: 430px;
+    left: 800px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g2_d>.grid>.problem:nth-child(3)::before
+{
+    content: "Is the answer correct? Y/N";
+    width: 100px;
+    display:block;
+    color: red;
+    background-color:white;
+    padding-bottom: 5px;
+}
+#b2_g2_d>.grid>.problem:nth-child(4)
+{
+    top: 520px;
+    left: 270px;
+    width: 40px;
+    height: 10px;
+}
+#b2_g2_d>.grid>.problem:nth-child(5)
+{
+    top: 690px;
+    left: 330px;
+    width: 50px;
+    height: 10px;
+}
+
+#b2_g2_d>.grid>.problem:nth-child(6)
+{
+    top: 1040px;
+    left: 115px;
+    width: 8px;
+    height: 10px;
+}
+
+
+/* Page 3 (aka form "e") */
+
+#b2_g2_e>.grid>.problem:nth-child(1)
+{
+    top: 2px;
+    left: 160px;
+    width: 20px;
+    height: 10px;
+}
+
+#b2_g2_e>.grid>.problem:nth-child(2)
+{
+    top: 120px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b2_g2_e>.grid>.problem:nth-child(3)
+{
+    top: 120px;
+    left: 350px;
+    width: 20px;
+    height: 5px;
+}
+#b2_g2_e>.grid>.problem:nth-child(4)
+{
+    top: 150px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b2_g2_e>.grid>.problem:nth-child(5)
+{
+    top: 150px;
+    left: 350px;
+    width: 20px;
+    height: 5px;
+}
+#b2_g2_e>.grid>.problem:nth-child(6)
+{
+    top: 175px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b2_g2_e>.grid>.problem:nth-child(7)
+{
+    top: 175px;
+    left: 350px;
+    width: 20px;
+    height: 5px;
+}
+#b2_g2_e>.grid>.problem:nth-child(8)
+{
+    top: 370px;
+    left: 250px;
+    width: 8px;
+    height: 10px;
+}
+#b2_g2_e>.grid>.problem:nth-child(9)
+{
+    top: 370px;
+    left: 300px;
+    width: 20px;
+    height: 10px;
+}
+#b2_g2_e>.grid>.problem:nth-child(10)
+{
+    top: 550px;
+    left: 150px;
+    width: 50px;
+    height: 10px;
+}
+#b2_g2_e>.grid>.problem:nth-child(11)
+{
+    top: 660px;
+    left: 750px;
+    width: 50px;
+    height: 10px;
+}
+
+
+/********************/
+/*   Benchmark 3    */
+/********************/
+
+/* Form C */
+
+#b3_g2_c>.grid>.problem:nth-child(1)
+{
+    top: 75px;
+    left: 190px;
+    width: 10px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(2)
+{
+    top: 75px;
+    left: 270px;
+    width: 10px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(3)
+{
+    top: 75px;
+    left: 350px;
+    width: 10px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(4)
+{
+    top: 75px;
+    left: 420px;
+    width: 20px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(5)
+{
+    top: 190px;
+    left: 420px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(6)
+{
+    top: 435px;
+    left: 150px;
+    width: 10px;
+    height: 5px;
+}
+#b3_g2_c>.grid>.problem:nth-child(7)
+{
+    top: 460px;
+    left: 150px;
+    width: 10px;
+    height: 5px;
+}
+#b3_g2_c>.grid>.problem:nth-child(8)
+{
+    top: 485px;
+    left: 150px;
+    width: 10px;
+    height: 5px;
+}
+#b3_g2_c>.grid>.problem:nth-child(9)
+{
+    top: 540px;
+    left: 360px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(10)
+{
+    top: 740px;
+    left: 20px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(11)
+{
+    top: 850px;
+    left: 750px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_c>.grid>.problem:nth-child(11)::before
+{
+    content: "Enter the number of hands that were correctly drawn:";
+    display:block;
+    width: 150px;
+    color: red;
+    padding-bottom: 5px;
+}
+
+/* Page 2 (aka form "d") */
+
+#b3_g2_d>.grid>.problem:nth-child(1)
+{
+    top: -20px;
+    left: 20px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_d>.grid>.problem:nth-child(2)
+{
+    top: 80px;
+    left: 420px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_d>.grid>.problem:nth-child(3)
+{
+    top: 380px;
+    left: 800px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_d>.grid>.problem:nth-child(3)::before
+{
+    content: "Is the answer correct? Y/N";
+    display:block;
+    width: 100px;
+    color: red;
+    background-color: white;
+    padding-bottom: 5px;
+}
+#b3_g2_d>.grid>.problem:nth-child(4)
+{
+    top: 480px;
+    left: 260px;
+    width: 40px;
+    height: 10px;
+}
+#b3_g2_d>.grid>.problem:nth-child(5)
+{
+    top: 660px;
+    left: 150px;
+    width: 50px;
+    height: 10px;
+}
+
+
+/* Page 3 (aka form "e") */
+
+#b3_g2_e>.grid>.problem:nth-child(1)
+{
+    top: 2px;
+    left: 155px;
+    width: 20px;
+    height: 10px;
+}
+#b3_g2_e>.grid>.problem:nth-child(2)
+{
+    top: 120px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b3_g2_e>.grid>.problem:nth-child(3)
+{
+    top: 120px;
+    left: 350px;
+    width: 20px;
+    height: 5px;
+}
+#b3_g2_e>.grid>.problem:nth-child(4)
+{
+    top: 150px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b3_g2_e>.grid>.problem:nth-child(5)
+{
+    top: 150px;
+    left: 350px;
+    width: 20px;
+    height: 5px;
+}
+#b3_g2_e>.grid>.problem:nth-child(6)
+{
+    top: 175px;
+    left: 170px;
+    width: 20px;
+    height: 5px;
+}
+#b3_g2_e>.grid>.problem:nth-child(7)
+{
+    top: 175px;
+    left: 350px;
+    width: 20px;
+    height: 5px;
+}
+#b3_g2_e>.grid>.problem:nth-child(8)
+{
+    top: 350px;
+    left: 230px;
+    width: 8px;
+    height: 10px;
+}
+#b3_g2_e>.grid>.problem:nth-child(9)
+{
+    top: 350px;
+    left: 290px;
+    width: 20px;
+    height: 10px;
+}
+#b3_g2_e>.grid>.problem:nth-child(10)
+{
+    top: 520px;
+    left: 130px;
+    width: 50px;
+    height: 10px;
+}
+#b3_g2_e>.grid>.problem:nth-child(11)
+{
+    top: 640px;
+    left: 720px;
+    width: 50px;
+    height: 10px;
+}

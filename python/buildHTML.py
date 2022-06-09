@@ -62,7 +62,7 @@ for bench in benchmarks:
 
 </head>
 <body>
-    <h1>Acadience Math Computation Scoring - Benchmark {bench} - {gradeName}</h1>
+    <h1>Acadience Math Scoring - Benchmark {bench} - {gradeName}</h1>
         <ul>
         <li><b>Jump to Other Grades in Benchmark {bench}:</b></li>
         <li><a href="./b{bench}g1.html">First Grade</a></li>
@@ -76,7 +76,7 @@ for bench in benchmarks:
 
     <section>
         <h2>Instructions</h2>
-        <p>This is a scoring module for Acadience Math. Type in the children's answers, and it will score every digit for you, giving partial credit where earned. Please let me know about any issues you find while using this! <a href="mailto:devbyjen@gmail.com">devbyjen@gmail.com</a></a></p>
+        <p>This is a scoring module for Acadience Math, for both Computation (grades 1-6) and Concepts and Applications (grades 2-6). Type in the children's answers, and it will score every digit for you, giving partial credit where earned. Please let me know about any issues you find while using this! <a href="mailto:devbyjen@gmail.com">devbyjen@gmail.com</a></a></p>
         <p>You MUST type the answers in exactly this way:
             <ul>
                 <li>Fractions:  9 3/4. Put a single space between the whole number and the fraction. Only use a forward slash.</li>
@@ -104,28 +104,37 @@ for bench in benchmarks:
             i=0
             for row in data[testName]:
                 html += f"""
-                    <div class="problem">
-                        <input type="text" class="answer"></input>
-                        <div class="solution"></div>
-                    </div>
+                        <div class="problem">
+                            <input type="text" class="answer"></input>
+                            <div class="solution"></div>
+                        </div>
     """
                 i+=1
             html += f"""
-                </div>
-                <div class="buttons">
-                    <button class="reset" onclick="reset('{testName}')">Clear Answers</button>
-                    <button class="score" onclick="scoreIt('{testName}', '{bench}', '{grade}', '{form}')">Score It!</button>
-                    <div class="total" id='{testName}_total'>Score: </div>
-                </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="reset" onclick="reset('{testName}')">Clear Answers</button>
+                        <button class="score" onclick="scoreIt('{testName}', '{bench}', '{grade}', '{form}')">Score It!</button>
+                        <div class="total" id='{testName}_total'>Score: </div>
+                    </div>
                 </div>
     """
 
+        html += f"""
+            </div>
+        </section>
+    </div>"""
+        if grade != '1':
             html += f"""
-                    </div>
-                </section>
-                </body>
-                <script src="score.js"></script>
-            </html>
+    <div class="buttons" id="cap_final">
+        <button class="reset" onclick="resetCAP('{bench}', '{grade}')">Clear & restart all CAP</button>
+        <button class="score" onclick="scoreAllCAP('{bench}', '{grade}')">Score all CAP</button>
+        <div class="total" id='CAP_total'>Total CAP Score: </div>
+    </div>"""
+        html += f"""
+</body>
+<script src="score.js"></script>
+</html>
             """
 
         htmlFile.write(html)
